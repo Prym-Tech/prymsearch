@@ -6,31 +6,31 @@
 
 @font-face {
   font-family: 'Charlie Display';
-  src: url('./fonts/charlie-display-3.ttf');
+  src: url('./assets/fonts/charlie-display-3.ttf');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Charlie Display';
-  src: url('./fonts/charlie-display-light.ttf');
+  src: url('./assets/fonts/charlie-display-light.ttf');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Charlie Display';
-  src: url('./fonts/charlie-display-semibold.ttf');
+  src: url('./assets/fonts/charlie-display-semibold.ttf');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Charlie Display';
-  src: url('./fonts/charlie-display-bold.ttf');
+  src: url('./assets/fonts/charlie-display-bold.ttf');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Charlie Display';
-  src: url('./fonts/charlie-display-ultra.ttf');
+  src: url('./assets/fonts/charlie-display-ultra.ttf');
   font-weight: 900;
 }
 
