@@ -105,7 +105,7 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentExampleIndex((prev) => (prev + 1) % examples.length);
-    }, 1000);
+    }, 1500);
     return () => clearInterval(interval);
   }, [examples.length]);
 
@@ -275,6 +275,11 @@ const HomePage = () => {
           transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           opacity: 0.6;
           transform: scale(0.95);
+          will-change: transform, opacity;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          transform-style: preserve-3d;
+          -webkit-transform-style: preserve-3d;
         }
 
         .example-item.active {
@@ -282,6 +287,27 @@ const HomePage = () => {
           transform: scale(1);
           box-shadow: 0 8px 25px rgba(0, 211, 127, 0.15);
           border-color: rgba(0, 211, 127, 0.3);
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+          .example-item {
+            transition: all 0.3s ease-out;
+            transform: scale(0.98);
+          }
+          
+          .example-item.active {
+            transform: scale(1);
+            box-shadow: 0 4px 15px rgba(0, 211, 127, 0.1);
+          }
+          
+          .animate-float {
+            animation: none;
+          }
+          
+          .hover-lift:hover {
+            transform: translateY(-4px);
+          }
         }
 
         .ripple {
@@ -442,7 +468,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-6 mb-20 animate-on-scroll">
             <h2 className="text-4xl lg:text-5xl font-bold" style={{color: '#121B00'}}>
-              Search the Right Way!
+              Why Choose Prymsearch?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our AI-powered Search AI technology delivers precise results where traditional platforms fail
@@ -601,7 +627,7 @@ const HomePage = () => {
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <p className="text-gray-400">
-              © 2025 Prymsearch. All rights reserved. Powered by Search AI.
+              © 2024 Prymsearch. All rights reserved. Powered by Search AI.
             </p>
           </div>
         </div>
