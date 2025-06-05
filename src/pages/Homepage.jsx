@@ -514,7 +514,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-6 mb-20 animate-on-scroll">
             <h2 className="text-4xl lg:text-5xl font-bold" style={{color: '#121B00'}}>
-              Why Choose Prymsearch?
+              Search the Right Way!
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our AI-powered Search AI technology delivers precise results where traditional platforms fail
