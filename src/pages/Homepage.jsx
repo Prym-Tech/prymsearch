@@ -105,7 +105,7 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentExampleIndex((prev) => (prev + 1) % examples.length);
-    }, 1500);
+    }, 1000);
     return () => clearInterval(interval);
   }, [examples.length]);
 
@@ -264,11 +264,57 @@ const HomePage = () => {
           animation: typewriter 2s steps(40, end), blink 0.75s step-end infinite;
         }
 
+        @keyframes gradientFlow {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        @keyframes textShimmer {
+          0% {
+            background-position: -200% center;
+          }
+          100% {
+            background-position: 200% center;
+          }
+        }
+
         .gradient-text {
-          background: linear-gradient(135deg, #121B00, #00D37F);
+          background: linear-gradient(
+            90deg,
+            #121B00 0%,
+            #00D37F 25%,
+            #121B00 50%,
+            #00D37F 75%,
+            #121B00 100%
+          );
+          background-size: 300% 100%;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+          animation: gradientFlow 3s ease-in-out infinite;
+        }
+
+        .gradient-text-shimmer {
+          background: linear-gradient(
+            90deg,
+            #121B00,
+            #121B00,
+            #00D37F,
+            #121B00,
+            #121B00
+          );
+          background-size: 200% 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: textShimmer 2s linear infinite;
         }
 
         .example-item {
@@ -627,7 +673,7 @@ const HomePage = () => {
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <p className="text-gray-400">
-              © 2024 Prymsearch. All rights reserved. Powered by Search AI.
+              © 2025 Prymsearch. All rights reserved. Powered by Search AI.
             </p>
           </div>
         </div>
