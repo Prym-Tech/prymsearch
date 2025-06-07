@@ -1,0 +1,616 @@
+[
+  {
+    "id": 1,
+    "type": "professional",
+    "name": "Adebayo Okonkwo",
+    "title": "Senior UX Designer",
+    "company": "Flutterwave",
+    "location": "Lagos, Nigeria",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.9,
+    "followers": "12.5K",
+    "engagement": "8.2%",
+    "verified": true,
+    "tags": ["UX Design", "Fintech", "Mobile Design", "User Research", "Figma"],
+    "summary": "Award-winning UX designer with 6+ years specializing in financial technology. Led design for 3 major fintech products serving 2M+ users.",
+    "contactInfo": {
+      "email": "adebayo.okonkwo@email.com",
+      "phone": "+234 801 234 5678",
+      "website": "adebayoux.com"
+    },
+    "social": {
+      "linkedin": "adebayo-okonkwo-ux",
+      "twitter": "adebayo_ux",
+      "instagram": "adebayo.designs"
+    },
+    "metrics": {
+      "projectsCompleted": 45,
+      "clientSatisfaction": "98%",
+      "responseTime": "< 2 hours",
+      "availability": "Available"
+    }
+  },
+  {
+    "id": 2,
+    "type": "professional",
+    "name": "Kemi Adeleke",
+    "title": "Product Designer",
+    "company": "Paystack",
+    "location": "Lagos, Nigeria",
+    "avatar": "https://images.unsplash.com/photo-1494790108755-2616b9a57b0c?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.8,
+    "followers": "8.7K",
+    "engagement": "6.1%",
+    "verified": true,
+    "tags": ["Product Design", "Fintech", "Design Systems", "Prototyping", "Sketch"],
+    "summary": "Creative product designer passionate about creating intuitive financial experiences. Expert in design systems and user-centered design.",
+    "contactInfo": {
+      "email": "kemi.adeleke@email.com",
+      "phone": "+234 802 345 6789",
+      "website": "kemiadeleke.design"
+    },
+    "social": {
+      "linkedin": "kemi-adeleke-design",
+      "twitter": "kemi_designs",
+      "instagram": "kemi.creative"
+    },
+    "metrics": {
+      "projectsCompleted": 32,
+      "clientSatisfaction": "96%",
+      "responseTime": "< 3 hours",
+      "availability": "Busy"
+    }
+  },
+  {
+    "id": 3,
+    "type": "influencer",
+    "name": "Thandie Mbeki",
+    "title": "Fitness Coach & Influencer",
+    "company": "FitLife SA",
+    "location": "Cape Town, South Africa",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.9,
+    "followers": "245K",
+    "engagement": "12.3%",
+    "verified": true,
+    "tags": ["Fitness", "Wellness", "Nutrition", "Lifestyle", "Yoga"],
+    "summary": "Certified fitness trainer and wellness coach inspiring healthy living across Africa. 5+ years building fitness communities with high engagement.",
+    "contactInfo": {
+      "email": "thandie@fitlifesa.com",
+      "phone": "+27 82 123 4567",
+      "website": "fitlifesa.com"
+    },
+    "social": {
+      "instagram": "thandie_fitlife",
+      "twitter": "thandie_fitness",
+      "youtube": "FitLifeSA"
+    },
+    "metrics": {
+      "avgViews": "85K",
+      "engagementRate": "12.3%",
+      "brandPartnerships": 25,
+      "followers": "245K"
+    }
+  },
+  {
+    "id": 4,
+    "type": "business",
+    "name": "EcoThreads Nigeria",
+    "title": "Sustainable Fashion Brand",
+    "company": "EcoThreads Nigeria",
+    "location": "Lagos, Nigeria",
+    "avatar": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop",
+    "rating": 4.7,
+    "followers": "45K",
+    "engagement": "9.1%",
+    "verified": true,
+    "tags": ["Sustainable Fashion", "Eco-Friendly", "African Textiles", "Ethical Production"],
+    "summary": "Leading sustainable fashion brand promoting African textiles and ethical production. Featured in Vogue Africa and Elle.",
+    "contactInfo": {
+      "email": "hello@ecothreads.ng",
+      "phone": "+234 803 456 7890",
+      "website": "ecothreads.ng"
+    },
+    "social": {
+      "instagram": "ecothreads_ng",
+      "twitter": "ecothreads",
+      "facebook": "EcoThreadsNigeria"
+    },
+    "metrics": {
+      "monthlyRevenue": "$25K+",
+      "customerSatisfaction": "94%",
+      "sustainabilityScore": "A+",
+      "productsSold": "5K+"
+    }
+  },
+  {
+    "id": 5,
+    "type": "professional",
+    "name": "James Anderson",
+    "title": "Cybersecurity Expert",
+    "company": "CyberSafe Ltd.",
+    "location": "London, UK",
+    "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.9,
+    "followers": "7.2K",
+    "engagement": "5.5%",
+    "verified": true,
+    "tags": ["Cybersecurity", "Penetration Testing", "Network Security", "CISSP"],
+    "summary": "CISSP-certified cybersecurity expert with over 10 years of experience in protecting enterprise networks from digital threats.",
+    "contactInfo": {
+      "email": "j.anderson@cybersafe.com",
+      "website": "jamesanderson.security"
+    },
+    "social": {
+      "linkedin": "james-anderson-cyber",
+      "twitter": "j_anderson_sec"
+    },
+    "metrics": {
+      "threatsNeutralized": "1500+",
+      "certifications": 5,
+      "consultations": "200+",
+      "availability": "Available"
+    }
+  },
+  {
+    "id": 6,
+    "type": "professional",
+    "name": "Sofia Rossi",
+    "title": "Python Developer (AI/ML)",
+    "company": "InnovateAI",
+    "location": "San Francisco, USA",
+    "avatar": "https://images.unsplash.com/photo-1580894908361-967195033215?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.8,
+    "followers": "15K",
+    "engagement": "9.5%",
+    "verified": true,
+    "tags": ["Python", "AI", "Machine Learning", "TensorFlow", "PyTorch"],
+    "summary": "Passionate Python developer specializing in building and deploying machine learning models. Contributor to several open-source AI projects.",
+    "contactInfo": {
+      "email": "sofia.rossi@innovate.ai",
+      "website": "sofiarossi.dev"
+    },
+    "social": {
+      "linkedin": "sofia-rossi-ml",
+      "twitter": "sofia_ai_dev"
+    },
+    "metrics": {
+      "modelsDeployed": 18,
+      "openSourceCommits": "500+",
+      "hackathonsWon": 3,
+      "availability": "Available"
+    }
+  },
+  {
+    "id": 7,
+    "type": "business",
+    "name": "ProductiveFlow",
+    "title": "SaaS Startup",
+    "company": "ProductiveFlow GmbH",
+    "location": "Berlin, Germany",
+    "avatar": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=150&h=150&fit=crop",
+    "rating": 4.7,
+    "followers": "120K",
+    "engagement": "7.8%",
+    "verified": true,
+    "tags": ["SaaS", "Productivity", "Project Management", "Collaboration"],
+    "summary": "A leading SaaS platform for productivity and project management, helping teams in Europe streamline their workflows.",
+    "contactInfo": {
+      "email": "contact@productiveflow.com",
+      "website": "productiveflow.com"
+    },
+    "social": {
+      "linkedin": "productiveflow",
+      "twitter": "getproductive"
+    },
+    "metrics": {
+      "activeUsers": "50K+",
+      "mrr": "$80K",
+      "churnRate": "2%",
+      "integrations": 25
+    }
+  },
+  {
+    "id": 8,
+    "type": "business",
+    "name": "GreenPlate Lagos",
+    "title": "Eco-Friendly Restaurant",
+    "company": "GreenPlate",
+    "location": "Lagos, Nigeria",
+    "avatar": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=150&h=150&fit=crop",
+    "rating": 4.9,
+    "followers": "22K",
+    "engagement": "11.2%",
+    "verified": true,
+    "tags": ["Eco-Friendly", "Restaurant", "Vegan", "Delivery", "Sustainable"],
+    "summary": "Farm-to-table restaurant in Lagos offering delicious, eco-friendly meals with a focus on local sourcing and delivery.",
+    "contactInfo": {
+      "email": "info@greenplatelagos.com",
+      "phone": "+234 901 234 5678",
+      "website": "greenplatelagos.com"
+    },
+    "social": {
+      "instagram": "greenplatelagos",
+      "facebook": "GreenPlateLagos"
+    },
+    "metrics": {
+      "dailyOrders": "200+",
+      "sustainabilityRating": "A+",
+      "localSourcing": "95%",
+      "customerReturnRate": "80%"
+    }
+  },
+  {
+    "id": 9,
+    "type": "influencer",
+    "name": "Leo Tech",
+    "title": "Tech Content Creator",
+    "company": "LeoTechTV",
+    "location": "London, UK",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.8,
+    "followers": "500K",
+    "engagement": "7.5%",
+    "verified": true,
+    "tags": ["Tech", "YouTube", "Gadgets", "Reviews", "Content Creator"],
+    "summary": "Tech enthusiast and YouTuber creating high-quality content on the latest gadgets and software. Known for honest reviews.",
+    "contactInfo": {
+      "email": "leo@leotechtv.com",
+      "website": "leotechtv.com"
+    },
+    "social": {
+      "youtube": "LeoTechTV",
+      "twitter": "leotechtv",
+      "instagram": "leotechtv"
+    },
+    "metrics": {
+      "youtubeSubscribers": "500K",
+      "avgViews": "150K",
+      "engagementRate": "7.5%",
+      "brandDeals": 40
+    }
+  },
+  {
+    "id": 10,
+    "type": "influencer",
+    "name": "Aisha Bello",
+    "title": "Beauty Influencer",
+    "company": "Aisha's Glow",
+    "location": "Accra, Ghana",
+    "avatar": "https://images.unsplash.com/photo-1596245309401-94f44046d5a4?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.9,
+    "followers": "150K",
+    "engagement": "10.1%",
+    "verified": true,
+    "tags": ["Beauty", "Natural Products", "Skincare", "West Africa"],
+    "summary": "Beauty influencer from Ghana focused on natural and organic skincare products suitable for West African skin.",
+    "contactInfo": {
+      "email": "contact@aishasglow.com"
+    },
+    "social": {
+      "instagram": "aishas_glow",
+      "youtube": "AishasGlow"
+    },
+    "metrics": {
+      "followers": "150K",
+      "engagementRate": "10.1%",
+      "sponsoredPosts": "100+",
+      "reach": "500K"
+    }
+  },
+  {
+    "id": 11,
+    "type": "professional",
+    "name": "Chioma Nwosu",
+    "title": "Yoga Instructor",
+    "company": "Zenith Yoga",
+    "location": "Lagos, Nigeria",
+    "avatar": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=150&h=150&fit=crop",
+    "rating": 4.9,
+    "followers": "5.2K",
+    "engagement": "15.2%",
+    "verified": false,
+    "tags": ["Yoga", "Vinyasa", "Wellness", "Instructor", "Lagos"],
+    "summary": "Certified yoga instructor in Lagos specializing in Vinyasa flow. Offers both group classes and private sessions.",
+    "contactInfo": {
+      "email": "chioma.yoga@email.com",
+      "phone": "+234 804 567 8901"
+    },
+    "social": {
+      "instagram": "chioma_vinyasa"
+    },
+    "metrics": {
+      "classesTaught": "500+",
+      "clientRetention": "90%",
+      "yearsExperience": 7,
+      "availability": "Available"
+    }
+  },
+  {
+    "id": 12,
+    "type": "professional",
+    "name": "David Chen",
+    "title": "Vintage Camera Collector",
+    "company": "Retro Clicks",
+    "location": "Tokyo, Japan",
+    "avatar": "https://images.unsplash.com/photo-1520341280432-4749d4d7e013?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.8,
+    "followers": "25K",
+    "engagement": "8.0%",
+    "verified": true,
+    "tags": ["Vintage Camera", "Collector", "Photography", "Enthusiast"],
+    "summary": "A passionate collector and restorer of vintage cameras. Runs a popular blog about the history of photography.",
+    "contactInfo": {
+      "email": "david.chen@retroclicks.com",
+      "website": "retroclicks.jp"
+    },
+    "social": {
+      "instagram": "retro_clicks_jp",
+      "twitter": "retroclicks"
+    },
+    "metrics": {
+      "cameraCollection": "300+",
+      "articlesPublished": 75,
+      "exhibitions": 5,
+      "responseTime": "< 24 hours"
+    }
+  },
+  {
+    "id": 13,
+    "type": "professional",
+    "name": "Dr. Emily Carter",
+    "title": "Calculus Tutor",
+    "company": "Advanced Tutoring",
+    "location": "Online",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+    "rating": 5.0,
+    "followers": "1.5K",
+    "engagement": "N/A",
+    "verified": true,
+    "tags": ["Tutoring", "Calculus", "Mathematics", "Online", "PhD"],
+    "summary": "PhD in Mathematics offering online tutoring for advanced calculus. Helps students excel in complex mathematical concepts.",
+    "contactInfo": {
+      "email": "dremily.carter@tutoring.com",
+      "website": "advancedcalc.tutor"
+    },
+    "social": {
+      "linkedin": "emily-carter-phd"
+    },
+    "metrics": {
+      "studentsTaught": "100+",
+      "successRate": "95%",
+      "avgRating": "5.0/5.0",
+      "availability": "Weekends"
+    }
+  },
+  {
+    "id": 14,
+    "type": "professional",
+    "name": "John Adebayo",
+    "title": "Python Developer",
+    "company": "Andela",
+    "location": "Lagos, Nigeria",
+    "avatar": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=150&h=150&fit=crop&crop=face",
+    "rating": 4.7,
+    "followers": "4.8k",
+    "engagement": "4.1%",
+    "verified": true,
+    "tags": ["Python", "Django", "Flask", "Backend", "Developer"],
+    "summary": "Experienced Python developer with a strong background in building scalable web applications and APIs.",
+    "contactInfo": {
+        "email": "john.adebayo@andela.com",
+        "website": "johnadebayo.dev"
+    },
+    "social": {
+        "linkedin": "john-adebayo-dev",
+        "twitter": "johndev"
+    },
+    "metrics": {
+        "projectsCompleted": 25,
+        "codeContributions": "1200+",
+        "techStack": "Python, Django, AWS",
+        "availability": "Available"
+    }
+  },
+  {
+      "id": 15,
+      "type": "business",
+      "name": "Lagos Fintech Hub",
+      "title": "Startup Incubator",
+      "company": "Lagos Fintech Hub",
+      "location": "Lagos, Nigeria",
+      "avatar": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=150&h=150&fit=crop",
+      "rating": 4.9,
+      "followers": "15k",
+      "engagement": "10.5%",
+      "verified": true,
+      "tags": ["Fintech", "Startup", "Incubator", "Lagos", "Investment"],
+      "summary": "The leading incubator for fintech startups in Lagos, providing funding, mentorship, and resources.",
+      "contactInfo": {
+          "email": "contact@lagosfintechhub.com",
+          "website": "lagosfintechhub.com"
+      },
+      "social": {
+          "linkedin": "lagos-fintech-hub",
+          "twitter": "LagosFintech"
+      },
+      "metrics": {
+          "startupsFunded": 50,
+          "totalInvestment": "$20M+",
+          "successRate": "85%",
+          "partnerships": 30
+      }
+  },
+  {
+      "id": 16,
+      "type": "influencer",
+      "name": "Funke Williams",
+      "title": "Food Blogger",
+      "company": "Funke's Kitchen",
+      "location": "Lagos, Nigeria",
+      "avatar": "https://images.unsplash.com/photo-1474978528675-4a50a4508a38?w=150&h=150&fit=crop&crop=face",
+      "rating": 4.8,
+      "followers": "85k",
+      "engagement": "12.2%",
+      "verified": true,
+      "tags": ["Food", "Blogger", "Nigerian Cuisine", "Lagos", "Recipes"],
+      "summary": "Popular food blogger sharing authentic Nigerian recipes and restaurant reviews in Lagos.",
+      "contactInfo": {
+          "email": "funke.williams@gmail.com",
+          "website": "funkeskitchen.com"
+      },
+      "social": {
+          "instagram": "funkes_kitchen",
+          "youtube": "FunkesKitchen"
+      },
+      "metrics": {
+          "monthlyViews": "1.2M",
+          "recipesPublished": "300+",
+          "brandCollabs": 25,
+          "followers": "85K"
+      }
+  },
+  {
+      "id": 17,
+      "type": "professional",
+      "name": "Sarah Chen",
+      "title": "AI Researcher",
+      "company": "Google AI",
+      "location": "San Francisco, USA",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      "rating": 5.0,
+      "followers": "22k",
+      "engagement": "11.8%",
+      "verified": true,
+      "tags": ["AI", "Machine Learning", "NLP", "Research", "San Francisco"],
+      "summary": "AI researcher at Google, focusing on natural language processing and large language models. Published in top AI conferences.",
+      "contactInfo": {
+          "email": "sarah.chen@google.com",
+          "website": "sarahchen.ai"
+      },
+      "social": {
+          "linkedin": "sarah-chen-ai",
+          "twitter": "sarah_ai"
+      },
+      "metrics": {
+          "publications": 15,
+          "citations": "3000+",
+          "patents": 4,
+          "keynotes": 10
+      }
+  },
+  {
+      "id": 18,
+      "type": "business",
+      "name": "Cape Town Solar",
+      "title": "Renewable Energy Company",
+      "company": "Cape Town Solar Inc.",
+      "location": "Cape Town, South Africa",
+      "avatar": "https://images.unsplash.com/photo-1508739399489-386f099d36a8?w=150&h=150&fit=crop",
+      "rating": 4.8,
+      "followers": "8k",
+      "engagement": "6.5%",
+      "verified": true,
+      "tags": ["Solar", "Renewable Energy", "Cape Town", "Sustainable"],
+      "summary": "Providing affordable and sustainable solar energy solutions for homes and businesses in Cape Town.",
+      "contactInfo": {
+          "email": "info@capetownsolar.co.za",
+          "website": "capetownsolar.co.za"
+      },
+      "social": {
+          "facebook": "CapeTownSolar",
+          "linkedin": "cape-town-solar"
+      },
+      "metrics": {
+          "installations": "1000+",
+          "energyGenerated": "5 GWh",
+          "co2Saved": "3500 tons",
+          "customerSatisfaction": "98%"
+      }
+  },
+  {
+      "id": 19,
+      "type": "influencer",
+      "name": "Mark Evans",
+      "title": "Travel Vlogger",
+      "company": "Mark My Travels",
+      "location": "Global",
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
+      "rating": 4.9,
+      "followers": "1.2M",
+      "engagement": "9.2%",
+      "verified": true,
+      "tags": ["Travel", "Vlogger", "YouTube", "Adventure", "Global"],
+      "summary": "Travel vlogger exploring the world's most beautiful destinations and sharing cinematic travel stories on YouTube.",
+      "contactInfo": {
+          "email": "mark.evans@travel.com"
+      },
+      "social": {
+          "youtube": "MarkMyTravels",
+          "instagram": "markmytravels"
+      },
+      "metrics": {
+          "subscribers": "1.2M",
+          "totalViews": "150M",
+          "countriesVisited": 85,
+          "partnerships": 50
+      }
+  },
+  {
+      "id": 20,
+      "type": "professional",
+      "name": "Nneka Eze",
+      "title": "Fintech Lawyer",
+      "company": "Eze & Associates",
+      "location": "Lagos, Nigeria",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+      "rating": 4.9,
+      "followers": "3.5k",
+      "engagement": "6.7%",
+      "verified": true,
+      "tags": ["Fintech", "Lawyer", "Legal", "Compliance", "Lagos"],
+      "summary": "Specialist fintech lawyer in Lagos, advising startups on regulatory compliance, fundraising, and corporate governance.",
+      "contactInfo": {
+          "email": "nneka.eze@law.com",
+          "website": "ezelaw.com"
+      },
+      "social": {
+          "linkedin": "nneka-eze-law"
+      },
+      "metrics": {
+          "casesWon": "50+",
+          "clients": "100+",
+          "yearsInPractice": 12,
+          "publications": 5
+      }
+  },
+  {
+      "id": 21,
+      "type": "business",
+      "name": "Nairobi Creative Hub",
+      "title": "Co-working Space",
+      "company": "Nairobi Creative Hub",
+      "location": "Nairobi, Kenya",
+      "avatar": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=150&h=150&fit=crop",
+      "rating": 4.7,
+      "followers": "12k",
+      "engagement": "8.1%",
+      "verified": true,
+      "tags": ["Coworking", "Creative", "Nairobi", "Community", "Startups"],
+      "summary": "A vibrant co-working space for creatives, freelancers, and startups in the heart of Nairobi.",
+      "contactInfo": {
+          "email": "hello@nairobihub.co.ke",
+          "website": "nairobihub.co.ke"
+      },
+      "social": {
+          "instagram": "nairobihub",
+          "twitter": "NairobiHub"
+      },
+      "metrics": {
+          "members": "500+",
+          "eventsHosted": 150,
+          "startupsLaunched": 20,
+          "satisfaction": "95%"
+      }
+  }
+]

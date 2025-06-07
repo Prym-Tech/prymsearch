@@ -96,8 +96,9 @@ const HomePage = () => {
   ];
 
   const examples = [
-    "Find freelance graphic designers in New York",
+    "Looking for freelance graphic designers specializing in branding for tech startups in New York",
     "Find fitness influencers in South Africa with 100k+ followers",
+    "Find me someone who offers online tutoring for digital marketing",
     "Find furniture merchants around Lagos, Nigeria"
   ];
 
