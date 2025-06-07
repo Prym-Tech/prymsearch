@@ -11,8 +11,8 @@ function App() {
       <Routes>
         {/* Public routes */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/search" element={<ProductDemo />} />
-        <Route path="/search-now" element={<ProdDemo />} />
+        <Route path="/search" element={<ProdDemo />} />
+        {/* <Route path="/search-now" element={<ProdDemo />} /> */}
       </Routes>
     </Router>
   );

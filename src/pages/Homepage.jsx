@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import Modal from 'react-modal';
 
-import { 
-  Search, 
-  Users, 
-  Target, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Shield, 
+import {
+  Search,
+  Users,
+  Target,
+  Zap,
+  Globe,
+  BarChart3,
+  Shield,
   ArrowRight,
   CheckCircle,
   Menu,
@@ -18,12 +19,20 @@ import {
   MessageSquare
 } from 'lucide-react';
 
+// Set the app element for react-modal
+Modal.setAppElement('#root'); // Or your app's root element
+
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [currentExampleIndex, setCurrentExampleIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -131,6 +140,10 @@ const HomePage = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  // NOTE: Replace 'VIDEO_ID' with the actual ID of your YouTube video.
+  const videoId = "dRPMJa2_vIM";
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -342,16 +355,16 @@ const HomePage = () => {
             transition: all 0.3s ease-out;
             transform: scale(0.98);
           }
-          
+         
           .example-item.active {
             transform: scale(1);
             box-shadow: 0 4px 15px rgba(0, 211, 127, 0.1);
           }
-          
+         
           .animate-float {
             animation: none;
           }
-          
+         
           .hover-lift:hover {
             transform: translateY(-4px);
           }
@@ -390,7 +403,7 @@ const HomePage = () => {
             <div className="text-2xl font-bold animate-slide-in-left" style={{color: '#121B00'}}>
               Prymsearch
             </div>
-            
+           
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-12 animate-fade-in-up">
               <a href="#features" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
@@ -411,7 +424,7 @@ const HomePage = () => {
             </div>
 
             {/* Mobile menu button */}
-            <button 
+            <button
               className="md:hidden p-2 transition-transform duration-300 hover:scale-110"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -452,21 +465,25 @@ const HomePage = () => {
                 <Sparkles className="w-4 h-4 animate-pulse-custom" style={{color: '#00D37F'}} />
                 <span className="text-sm font-medium text-gray-700">Powered by Search AI 1.0</span>
               </div>
-              
+             
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight gradient-text animate-slide-in-left">
                 The Google for Finding People
               </h1>
-              
+             
               <p className="text-xl text-gray-600 leading-relaxed max-w-lg animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                 Find the right people, businesses, and creators with AI precision. No more endless scrolling through social media or hit-or-miss cold outreach.
               </p>
-              
+             
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
                 <button className="text-white px-8 py-4 rounded-lg font-medium text-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#121B00'}}>
                   <span>Join Waitlist</span>
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
-                <button className="border-2 px-8 py-4 rounded-lg font-medium text-lg hover:border-opacity-60 transition-all duration-300 hover:scale-105 hover:bg-gray-50" style={{borderColor: '#121B00', color: '#121B00'}}>
+                <button
+                  onClick={openModal}
+                  className="cursor-pointer border-2 px-8 py-4 rounded-lg font-medium text-lg hover:border-opacity-60 transition-all duration-300 hover:scale-105 hover:bg-gray-50"
+                  style={{borderColor: '#121B00', color: '#121B00'}}
+                >
                   Watch Demo
                 </button>
               </div>
@@ -488,7 +505,7 @@ const HomePage = () => {
                     readOnly
                   />
                 </div>
-                
+               
                 <div className="space-y-3">
                   <p className="text-sm font-medium text-gray-700 mb-4">Try these examples:</p>
                   {examples.map((example, index) => (
@@ -521,11 +538,11 @@ const HomePage = () => {
               Our AI-powered Search AI technology delivers precise results where traditional platforms fail
             </p>
           </div>
-          
+         
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white p-8 lg:p-10 rounded-xl shadow-sm border border-gray-100 hover-lift animate-on-scroll"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
@@ -555,11 +572,11 @@ const HomePage = () => {
               Four simple steps to find exactly who you need
             </p>
           </div>
-          
+         
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {steps.map((step, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="text-center space-y-6 animate-on-scroll hover:scale-105 transition-transform duration-300"
                 style={{animationDelay: `${index * 0.2}s`}}
               >
@@ -590,7 +607,7 @@ const HomePage = () => {
           <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             Join thousands of professionals, businesses, and creators who are discovering the power of AI-driven people search.
           </p>
-          
+         
           <div className="max-w-md mx-auto animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <div className="space-y-4">
               <input
@@ -640,7 +657,7 @@ const HomePage = () => {
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Enterprise</a>
               </div>
             </div>
-            
+           
             <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <h3 className="text-lg font-semibold" style={{color: '#00D37F'}}>Company</h3>
               <div className="space-y-2">
@@ -650,7 +667,7 @@ const HomePage = () => {
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Blog</a>
               </div>
             </div>
-            
+           
             <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <h3 className="text-lg font-semibold" style={{color: '#00D37F'}}>Support</h3>
               <div className="space-y-2">
@@ -660,7 +677,7 @@ const HomePage = () => {
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Status</a>
               </div>
             </div>
-            
+           
             <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               <h3 className="text-lg font-semibold" style={{color: '#00D37F'}}>Legal</h3>
               <div className="space-y-2">
@@ -671,7 +688,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          
+         
           <div className="border-t border-gray-800 mt-12 pt-8 text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <p className="text-gray-400">
               © 2025 Prymsearch. All rights reserved. Powered by Search AI.
@@ -679,6 +696,50 @@ const HomePage = () => {
           </div>
         </div>
       </footer>
+
+      {/* Video Modal */}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+            zIndex: 1000
+          },
+          content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            border: 'none',
+            background: 'transparent',
+            padding: 0,
+            overflow: 'visible'
+          }
+        }}
+        contentLabel="Watch Demo Video"
+      >
+        <div className="relative" style={{ paddingBottom: '56.25%', height: 0, width: '80vw', maxWidth: '900px' }}>
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            title="Demo Video"
+            className="absolute top-0 left-0 w-full h-full"
+          ></iframe>
+           <button
+            onClick={closeModal}
+            className="absolute -top-4 -right-4 bg-white rounded-full p-2"
+            style={{ zIndex: 1001}}
+           >
+            <X className="w-6 h-6 text-black" />
+           </button>
+        </div>
+      </Modal>
+
     </div>
   );
 };

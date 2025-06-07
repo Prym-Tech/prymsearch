@@ -1,616 +1,69 @@
 [
-  {
-    "id": 1,
-    "type": "professional",
-    "name": "Adebayo Okonkwo",
-    "title": "Senior UX Designer",
-    "company": "Flutterwave",
-    "location": "Lagos, Nigeria",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.9,
-    "followers": "12.5K",
-    "engagement": "8.2%",
-    "verified": true,
-    "tags": ["UX Design", "Fintech", "Mobile Design", "User Research", "Figma"],
-    "summary": "Award-winning UX designer with 6+ years specializing in financial technology. Led design for 3 major fintech products serving 2M+ users.",
-    "contactInfo": {
-      "email": "adebayo.okonkwo@email.com",
-      "phone": "+234 801 234 5678",
-      "website": "adebayoux.com"
-    },
-    "social": {
-      "linkedin": "adebayo-okonkwo-ux",
-      "twitter": "adebayo_ux",
-      "instagram": "adebayo.designs"
-    },
-    "metrics": {
-      "projectsCompleted": 45,
-      "clientSatisfaction": "98%",
-      "responseTime": "< 2 hours",
-      "availability": "Available"
-    }
-  },
-  {
-    "id": 2,
-    "type": "professional",
-    "name": "Kemi Adeleke",
-    "title": "Product Designer",
-    "company": "Paystack",
-    "location": "Lagos, Nigeria",
-    "avatar": "https://images.unsplash.com/photo-1494790108755-2616b9a57b0c?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.8,
-    "followers": "8.7K",
-    "engagement": "6.1%",
-    "verified": true,
-    "tags": ["Product Design", "Fintech", "Design Systems", "Prototyping", "Sketch"],
-    "summary": "Creative product designer passionate about creating intuitive financial experiences. Expert in design systems and user-centered design.",
-    "contactInfo": {
-      "email": "kemi.adeleke@email.com",
-      "phone": "+234 802 345 6789",
-      "website": "kemiadeleke.design"
-    },
-    "social": {
-      "linkedin": "kemi-adeleke-design",
-      "twitter": "kemi_designs",
-      "instagram": "kemi.creative"
-    },
-    "metrics": {
-      "projectsCompleted": 32,
-      "clientSatisfaction": "96%",
-      "responseTime": "< 3 hours",
-      "availability": "Busy"
-    }
-  },
-  {
-    "id": 3,
-    "type": "influencer",
-    "name": "Thandie Mbeki",
-    "title": "Fitness Coach & Influencer",
-    "company": "FitLife SA",
-    "location": "Cape Town, South Africa",
-    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.9,
-    "followers": "245K",
-    "engagement": "12.3%",
-    "verified": true,
-    "tags": ["Fitness", "Wellness", "Nutrition", "Lifestyle", "Yoga"],
-    "summary": "Certified fitness trainer and wellness coach inspiring healthy living across Africa. 5+ years building fitness communities with high engagement.",
-    "contactInfo": {
-      "email": "thandie@fitlifesa.com",
-      "phone": "+27 82 123 4567",
-      "website": "fitlifesa.com"
-    },
-    "social": {
-      "instagram": "thandie_fitlife",
-      "twitter": "thandie_fitness",
-      "youtube": "FitLifeSA"
-    },
-    "metrics": {
-      "avgViews": "85K",
-      "engagementRate": "12.3%",
-      "brandPartnerships": 25,
-      "followers": "245K"
-    }
-  },
-  {
-    "id": 4,
-    "type": "business",
-    "name": "EcoThreads Nigeria",
-    "title": "Sustainable Fashion Brand",
-    "company": "EcoThreads Nigeria",
-    "location": "Lagos, Nigeria",
-    "avatar": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop",
-    "rating": 4.7,
-    "followers": "45K",
-    "engagement": "9.1%",
-    "verified": true,
-    "tags": ["Sustainable Fashion", "Eco-Friendly", "African Textiles", "Ethical Production"],
-    "summary": "Leading sustainable fashion brand promoting African textiles and ethical production. Featured in Vogue Africa and Elle.",
-    "contactInfo": {
-      "email": "hello@ecothreads.ng",
-      "phone": "+234 803 456 7890",
-      "website": "ecothreads.ng"
-    },
-    "social": {
-      "instagram": "ecothreads_ng",
-      "twitter": "ecothreads",
-      "facebook": "EcoThreadsNigeria"
-    },
-    "metrics": {
-      "monthlyRevenue": "$25K+",
-      "customerSatisfaction": "94%",
-      "sustainabilityScore": "A+",
-      "productsSold": "5K+"
-    }
-  },
-  {
-    "id": 5,
-    "type": "professional",
-    "name": "James Anderson",
-    "title": "Cybersecurity Expert",
-    "company": "CyberSafe Ltd.",
-    "location": "London, UK",
-    "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.9,
-    "followers": "7.2K",
-    "engagement": "5.5%",
-    "verified": true,
-    "tags": ["Cybersecurity", "Penetration Testing", "Network Security", "CISSP"],
-    "summary": "CISSP-certified cybersecurity expert with over 10 years of experience in protecting enterprise networks from digital threats.",
-    "contactInfo": {
-      "email": "j.anderson@cybersafe.com",
-      "website": "jamesanderson.security"
-    },
-    "social": {
-      "linkedin": "james-anderson-cyber",
-      "twitter": "j_anderson_sec"
-    },
-    "metrics": {
-      "threatsNeutralized": "1500+",
-      "certifications": 5,
-      "consultations": "200+",
-      "availability": "Available"
-    }
-  },
-  {
-    "id": 6,
-    "type": "professional",
-    "name": "Sofia Rossi",
-    "title": "Python Developer (AI/ML)",
-    "company": "InnovateAI",
-    "location": "San Francisco, USA",
-    "avatar": "https://images.unsplash.com/photo-1580894908361-967195033215?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.8,
-    "followers": "15K",
-    "engagement": "9.5%",
-    "verified": true,
-    "tags": ["Python", "AI", "Machine Learning", "TensorFlow", "PyTorch"],
-    "summary": "Passionate Python developer specializing in building and deploying machine learning models. Contributor to several open-source AI projects.",
-    "contactInfo": {
-      "email": "sofia.rossi@innovate.ai",
-      "website": "sofiarossi.dev"
-    },
-    "social": {
-      "linkedin": "sofia-rossi-ml",
-      "twitter": "sofia_ai_dev"
-    },
-    "metrics": {
-      "modelsDeployed": 18,
-      "openSourceCommits": "500+",
-      "hackathonsWon": 3,
-      "availability": "Available"
-    }
-  },
-  {
-    "id": 7,
-    "type": "business",
-    "name": "ProductiveFlow",
-    "title": "SaaS Startup",
-    "company": "ProductiveFlow GmbH",
-    "location": "Berlin, Germany",
-    "avatar": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=150&h=150&fit=crop",
-    "rating": 4.7,
-    "followers": "120K",
-    "engagement": "7.8%",
-    "verified": true,
-    "tags": ["SaaS", "Productivity", "Project Management", "Collaboration"],
-    "summary": "A leading SaaS platform for productivity and project management, helping teams in Europe streamline their workflows.",
-    "contactInfo": {
-      "email": "contact@productiveflow.com",
-      "website": "productiveflow.com"
-    },
-    "social": {
-      "linkedin": "productiveflow",
-      "twitter": "getproductive"
-    },
-    "metrics": {
-      "activeUsers": "50K+",
-      "mrr": "$80K",
-      "churnRate": "2%",
-      "integrations": 25
-    }
-  },
-  {
-    "id": 8,
-    "type": "business",
-    "name": "GreenPlate Lagos",
-    "title": "Eco-Friendly Restaurant",
-    "company": "GreenPlate",
-    "location": "Lagos, Nigeria",
-    "avatar": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=150&h=150&fit=crop",
-    "rating": 4.9,
-    "followers": "22K",
-    "engagement": "11.2%",
-    "verified": true,
-    "tags": ["Eco-Friendly", "Restaurant", "Vegan", "Delivery", "Sustainable"],
-    "summary": "Farm-to-table restaurant in Lagos offering delicious, eco-friendly meals with a focus on local sourcing and delivery.",
-    "contactInfo": {
-      "email": "info@greenplatelagos.com",
-      "phone": "+234 901 234 5678",
-      "website": "greenplatelagos.com"
-    },
-    "social": {
-      "instagram": "greenplatelagos",
-      "facebook": "GreenPlateLagos"
-    },
-    "metrics": {
-      "dailyOrders": "200+",
-      "sustainabilityRating": "A+",
-      "localSourcing": "95%",
-      "customerReturnRate": "80%"
-    }
-  },
-  {
-    "id": 9,
-    "type": "influencer",
-    "name": "Leo Tech",
-    "title": "Tech Content Creator",
-    "company": "LeoTechTV",
-    "location": "London, UK",
-    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.8,
-    "followers": "500K",
-    "engagement": "7.5%",
-    "verified": true,
-    "tags": ["Tech", "YouTube", "Gadgets", "Reviews", "Content Creator"],
-    "summary": "Tech enthusiast and YouTuber creating high-quality content on the latest gadgets and software. Known for honest reviews.",
-    "contactInfo": {
-      "email": "leo@leotechtv.com",
-      "website": "leotechtv.com"
-    },
-    "social": {
-      "youtube": "LeoTechTV",
-      "twitter": "leotechtv",
-      "instagram": "leotechtv"
-    },
-    "metrics": {
-      "youtubeSubscribers": "500K",
-      "avgViews": "150K",
-      "engagementRate": "7.5%",
-      "brandDeals": 40
-    }
-  },
-  {
-    "id": 10,
-    "type": "influencer",
-    "name": "Aisha Bello",
-    "title": "Beauty Influencer",
-    "company": "Aisha's Glow",
-    "location": "Accra, Ghana",
-    "avatar": "https://images.unsplash.com/photo-1596245309401-94f44046d5a4?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.9,
-    "followers": "150K",
-    "engagement": "10.1%",
-    "verified": true,
-    "tags": ["Beauty", "Natural Products", "Skincare", "West Africa"],
-    "summary": "Beauty influencer from Ghana focused on natural and organic skincare products suitable for West African skin.",
-    "contactInfo": {
-      "email": "contact@aishasglow.com"
-    },
-    "social": {
-      "instagram": "aishas_glow",
-      "youtube": "AishasGlow"
-    },
-    "metrics": {
-      "followers": "150K",
-      "engagementRate": "10.1%",
-      "sponsoredPosts": "100+",
-      "reach": "500K"
-    }
-  },
-  {
-    "id": 11,
-    "type": "professional",
-    "name": "Chioma Nwosu",
-    "title": "Yoga Instructor",
-    "company": "Zenith Yoga",
-    "location": "Lagos, Nigeria",
-    "avatar": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=150&h=150&fit=crop",
-    "rating": 4.9,
-    "followers": "5.2K",
-    "engagement": "15.2%",
-    "verified": false,
-    "tags": ["Yoga", "Vinyasa", "Wellness", "Instructor", "Lagos"],
-    "summary": "Certified yoga instructor in Lagos specializing in Vinyasa flow. Offers both group classes and private sessions.",
-    "contactInfo": {
-      "email": "chioma.yoga@email.com",
-      "phone": "+234 804 567 8901"
-    },
-    "social": {
-      "instagram": "chioma_vinyasa"
-    },
-    "metrics": {
-      "classesTaught": "500+",
-      "clientRetention": "90%",
-      "yearsExperience": 7,
-      "availability": "Available"
-    }
-  },
-  {
-    "id": 12,
-    "type": "professional",
-    "name": "David Chen",
-    "title": "Vintage Camera Collector",
-    "company": "Retro Clicks",
-    "location": "Tokyo, Japan",
-    "avatar": "https://images.unsplash.com/photo-1520341280432-4749d4d7e013?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.8,
-    "followers": "25K",
-    "engagement": "8.0%",
-    "verified": true,
-    "tags": ["Vintage Camera", "Collector", "Photography", "Enthusiast"],
-    "summary": "A passionate collector and restorer of vintage cameras. Runs a popular blog about the history of photography.",
-    "contactInfo": {
-      "email": "david.chen@retroclicks.com",
-      "website": "retroclicks.jp"
-    },
-    "social": {
-      "instagram": "retro_clicks_jp",
-      "twitter": "retroclicks"
-    },
-    "metrics": {
-      "cameraCollection": "300+",
-      "articlesPublished": 75,
-      "exhibitions": 5,
-      "responseTime": "< 24 hours"
-    }
-  },
-  {
-    "id": 13,
-    "type": "professional",
-    "name": "Dr. Emily Carter",
-    "title": "Calculus Tutor",
-    "company": "Advanced Tutoring",
-    "location": "Online",
-    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
-    "rating": 5.0,
-    "followers": "1.5K",
-    "engagement": "N/A",
-    "verified": true,
-    "tags": ["Tutoring", "Calculus", "Mathematics", "Online", "PhD"],
-    "summary": "PhD in Mathematics offering online tutoring for advanced calculus. Helps students excel in complex mathematical concepts.",
-    "contactInfo": {
-      "email": "dremily.carter@tutoring.com",
-      "website": "advancedcalc.tutor"
-    },
-    "social": {
-      "linkedin": "emily-carter-phd"
-    },
-    "metrics": {
-      "studentsTaught": "100+",
-      "successRate": "95%",
-      "avgRating": "5.0/5.0",
-      "availability": "Weekends"
-    }
-  },
-  {
-    "id": 14,
-    "type": "professional",
-    "name": "John Adebayo",
-    "title": "Python Developer",
-    "company": "Andela",
-    "location": "Lagos, Nigeria",
-    "avatar": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=150&h=150&fit=crop&crop=face",
-    "rating": 4.7,
-    "followers": "4.8k",
-    "engagement": "4.1%",
-    "verified": true,
-    "tags": ["Python", "Django", "Flask", "Backend", "Developer"],
-    "summary": "Experienced Python developer with a strong background in building scalable web applications and APIs.",
-    "contactInfo": {
-        "email": "john.adebayo@andela.com",
-        "website": "johnadebayo.dev"
-    },
-    "social": {
-        "linkedin": "john-adebayo-dev",
-        "twitter": "johndev"
-    },
-    "metrics": {
-        "projectsCompleted": 25,
-        "codeContributions": "1200+",
-        "techStack": "Python, Django, AWS",
-        "availability": "Available"
-    }
-  },
-  {
-      "id": 15,
-      "type": "business",
-      "name": "Lagos Fintech Hub",
-      "title": "Startup Incubator",
-      "company": "Lagos Fintech Hub",
-      "location": "Lagos, Nigeria",
-      "avatar": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=150&h=150&fit=crop",
-      "rating": 4.9,
-      "followers": "15k",
-      "engagement": "10.5%",
-      "verified": true,
-      "tags": ["Fintech", "Startup", "Incubator", "Lagos", "Investment"],
-      "summary": "The leading incubator for fintech startups in Lagos, providing funding, mentorship, and resources.",
-      "contactInfo": {
-          "email": "contact@lagosfintechhub.com",
-          "website": "lagosfintechhub.com"
-      },
-      "social": {
-          "linkedin": "lagos-fintech-hub",
-          "twitter": "LagosFintech"
-      },
-      "metrics": {
-          "startupsFunded": 50,
-          "totalInvestment": "$20M+",
-          "successRate": "85%",
-          "partnerships": 30
-      }
-  },
-  {
-      "id": 16,
-      "type": "influencer",
-      "name": "Funke Williams",
-      "title": "Food Blogger",
-      "company": "Funke's Kitchen",
-      "location": "Lagos, Nigeria",
-      "avatar": "https://images.unsplash.com/photo-1474978528675-4a50a4508a38?w=150&h=150&fit=crop&crop=face",
-      "rating": 4.8,
-      "followers": "85k",
-      "engagement": "12.2%",
-      "verified": true,
-      "tags": ["Food", "Blogger", "Nigerian Cuisine", "Lagos", "Recipes"],
-      "summary": "Popular food blogger sharing authentic Nigerian recipes and restaurant reviews in Lagos.",
-      "contactInfo": {
-          "email": "funke.williams@gmail.com",
-          "website": "funkeskitchen.com"
-      },
-      "social": {
-          "instagram": "funkes_kitchen",
-          "youtube": "FunkesKitchen"
-      },
-      "metrics": {
-          "monthlyViews": "1.2M",
-          "recipesPublished": "300+",
-          "brandCollabs": 25,
-          "followers": "85K"
-      }
-  },
-  {
-      "id": 17,
-      "type": "professional",
-      "name": "Sarah Chen",
-      "title": "AI Researcher",
-      "company": "Google AI",
-      "location": "San Francisco, USA",
-      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-      "rating": 5.0,
-      "followers": "22k",
-      "engagement": "11.8%",
-      "verified": true,
-      "tags": ["AI", "Machine Learning", "NLP", "Research", "San Francisco"],
-      "summary": "AI researcher at Google, focusing on natural language processing and large language models. Published in top AI conferences.",
-      "contactInfo": {
-          "email": "sarah.chen@google.com",
-          "website": "sarahchen.ai"
-      },
-      "social": {
-          "linkedin": "sarah-chen-ai",
-          "twitter": "sarah_ai"
-      },
-      "metrics": {
-          "publications": 15,
-          "citations": "3000+",
-          "patents": 4,
-          "keynotes": 10
-      }
-  },
-  {
-      "id": 18,
-      "type": "business",
-      "name": "Cape Town Solar",
-      "title": "Renewable Energy Company",
-      "company": "Cape Town Solar Inc.",
-      "location": "Cape Town, South Africa",
-      "avatar": "https://images.unsplash.com/photo-1508739399489-386f099d36a8?w=150&h=150&fit=crop",
-      "rating": 4.8,
-      "followers": "8k",
-      "engagement": "6.5%",
-      "verified": true,
-      "tags": ["Solar", "Renewable Energy", "Cape Town", "Sustainable"],
-      "summary": "Providing affordable and sustainable solar energy solutions for homes and businesses in Cape Town.",
-      "contactInfo": {
-          "email": "info@capetownsolar.co.za",
-          "website": "capetownsolar.co.za"
-      },
-      "social": {
-          "facebook": "CapeTownSolar",
-          "linkedin": "cape-town-solar"
-      },
-      "metrics": {
-          "installations": "1000+",
-          "energyGenerated": "5 GWh",
-          "co2Saved": "3500 tons",
-          "customerSatisfaction": "98%"
-      }
-  },
-  {
-      "id": 19,
-      "type": "influencer",
-      "name": "Mark Evans",
-      "title": "Travel Vlogger",
-      "company": "Mark My Travels",
-      "location": "Global",
-      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
-      "rating": 4.9,
-      "followers": "1.2M",
-      "engagement": "9.2%",
-      "verified": true,
-      "tags": ["Travel", "Vlogger", "YouTube", "Adventure", "Global"],
-      "summary": "Travel vlogger exploring the world's most beautiful destinations and sharing cinematic travel stories on YouTube.",
-      "contactInfo": {
-          "email": "mark.evans@travel.com"
-      },
-      "social": {
-          "youtube": "MarkMyTravels",
-          "instagram": "markmytravels"
-      },
-      "metrics": {
-          "subscribers": "1.2M",
-          "totalViews": "150M",
-          "countriesVisited": 85,
-          "partnerships": 50
-      }
-  },
-  {
-      "id": 20,
-      "type": "professional",
-      "name": "Nneka Eze",
-      "title": "Fintech Lawyer",
-      "company": "Eze & Associates",
-      "location": "Lagos, Nigeria",
-      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-      "rating": 4.9,
-      "followers": "3.5k",
-      "engagement": "6.7%",
-      "verified": true,
-      "tags": ["Fintech", "Lawyer", "Legal", "Compliance", "Lagos"],
-      "summary": "Specialist fintech lawyer in Lagos, advising startups on regulatory compliance, fundraising, and corporate governance.",
-      "contactInfo": {
-          "email": "nneka.eze@law.com",
-          "website": "ezelaw.com"
-      },
-      "social": {
-          "linkedin": "nneka-eze-law"
-      },
-      "metrics": {
-          "casesWon": "50+",
-          "clients": "100+",
-          "yearsInPractice": 12,
-          "publications": 5
-      }
-  },
-  {
-      "id": 21,
-      "type": "business",
-      "name": "Nairobi Creative Hub",
-      "title": "Co-working Space",
-      "company": "Nairobi Creative Hub",
-      "location": "Nairobi, Kenya",
-      "avatar": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=150&h=150&fit=crop",
-      "rating": 4.7,
-      "followers": "12k",
-      "engagement": "8.1%",
-      "verified": true,
-      "tags": ["Coworking", "Creative", "Nairobi", "Community", "Startups"],
-      "summary": "A vibrant co-working space for creatives, freelancers, and startups in the heart of Nairobi.",
-      "contactInfo": {
-          "email": "hello@nairobihub.co.ke",
-          "website": "nairobihub.co.ke"
-      },
-      "social": {
-          "instagram": "nairobihub",
-          "twitter": "NairobiHub"
-      },
-      "metrics": {
-          "members": "500+",
-          "eventsHosted": 150,
-          "startupsLaunched": 20,
-          "satisfaction": "95%"
-      }
-  }
+  { "id": 1, "name": "Adebayo Okonkwo", "title": "Senior UX Designer", "company": "Flutterwave", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "12.5K", "engagement": "8.2%", "verified": true, "tags": ["UX Design", "Fintech", "Mobile Design", "Lagos"], "summary": "Award-winning UX designer with great experience in financial technology (fintech). Based in Lagos.", "contactInfo": { "email": "adebayo.o@email.com", "website": "adebayoux.com" }, "social": { "linkedin": "adebayo-okonkwo-ux", "instagram": "adebayo_ux" }, "metrics": { "projects": 45, "satisfaction": "98%", "response": "< 2h" } },
+  { "id": 2, "name": "Kemi Adeleke", "title": "Product Designer", "company": "Paystack", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1494790108755-2616b9a57b0c?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "8.7K", "engagement": "6.1%", "verified": true, "tags": ["Product Design", "Fintech", "Design Systems", "Lagos"], "summary": "Creative product designer passionate about creating intuitive financial experiences. My experience is in the Lagos fintech scene.", "contactInfo": { "email": "kemi.a@email.com", "website": "kemiadeleke.design" }, "social": { "linkedin": "kemi-adeleke-design", "instagram": "kemi.designs" }, "metrics": { "projects": 32, "satisfaction": "96%", "response": "< 3h" } },
+  { "id": 5, "name": "David Chen", "title": "Senior Python Developer", "company": "Nvidia", "location": "San Francisco, USA", "avatar": "https://images.unsplash.com/photo-1557862921-37829c790f19?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "5.2K", "engagement": "4.5%", "verified": true, "tags": ["Python", "AI/ML", "Data Science", "San Francisco"], "summary": "Experienced Python developer in San Francisco with a focus on AI/ML applications.", "contactInfo": { "email": "david.c@email.com", "website": "davidchendev.io" }, "social": { "linkedin": "david-chen-dev", "instagram": "davidchen_dev", "twitter": "davidchen_py" }, "metrics": { "projects": 60, "commits": "5K+", "response": "< 24h" } },
+  { "id": 8, "name": "Samuel Clark", "title": "Cybersecurity Expert", "company": "CyberSafe Ltd.", "location": "London, UK", "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "25K", "engagement": "10.2%", "verified": true, "tags": ["Cybersecurity", "Penetration Testing", "Ethical Hacking", "London", "5+ years experience"], "summary": "CISSP-certified cybersecurity expert in London. My experience is over 5+ years in protecting enterprise systems.", "contactInfo": { "email": "s.clark@email.com", "website": "cybersafeltd.co.uk" }, "social": { "linkedin": "samuel-clark-cyber", "instagram": "samclark_sec", "twitter": "samclark_sec" }, "metrics": { "threats": "1K+", "satisfaction": "100%", "experience": "10+ years" } },
+  { "id": 9, "name": "Chidinma Nwosu", "title": "UX Designer", "company": "Interswitch", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face", "rating": 4.7, "followers": "6.1K", "engagement": "5.5%", "verified": true, "tags": ["UX Design", "Fintech", "User Experience", "Lagos"], "summary": "A talented UX Designer at Interswitch with a knack for solving complex user problems in the fintech industry. Based in Lagos.", "contactInfo": { "email": "c.nwosu@email.com", "website": "chidinmadraws.com" }, "social": { "linkedin": "chidinma-nwosu", "instagram": "chidinma_ux" }, "metrics": { "projects": 25, "satisfaction": "95%", "response": "< 6h" } },
+  { "id": 10, "name": "Elena Rodriguez", "title": "Yoga Instructor", "company": "Serenity Yoga", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1548844322-15c851c4942c?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "15K", "engagement": "11.8%", "verified": false, "tags": ["Yoga", "Vinyasa Flow", "Wellness", "Instructor", "Lagos"], "summary": "Certified Yoga instructor based in Lagos, specializing in Vinyasa flow and meditation.", "contactInfo": { "email": "elena.r@email.com", "website": "serenityyoga.ng" }, "social": { "linkedin": "elena-rodriguez-yoga", "instagram": "elena_serenity_yoga" }, "metrics": { "classes": "500+", "retention": "92%", "response": "< 12h" } },
+  { "id": 13, "name": "Maria Garcia", "title": "Python Developer", "company": "Spotify", "location": "San Francisco, USA", "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "3.1K", "engagement": "3.9%", "verified": false, "tags": ["Python", "Backend", "API", "AI/ML", "San Francisco"], "summary": "Software engineer in San Francisco with 5+ years experience, specializing in Python for backend services and AI/ML data pipelines.", "contactInfo": { "email": "m.garcia.dev@email.com", "website": "mariagdev.io" }, "social": { "linkedin": "maria-garcia-dev", "instagram": "mariagdev" }, "metrics": { "projects": 15, "experience": "5+ years", "response": "48h" } },
+  { "id": 14, "name": "Vintage Finds", "title": "Vintage Camera Collector", "company": "Self-Employed", "location": "Online", "avatar": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=150&h=150&fit=crop", "rating": 5.0, "followers": "55K", "engagement": "13.2%", "verified": true, "tags": ["Vintage Camera", "Collector", "Photography", "Enthusiast"], "summary": "Collector and enthusiast of vintage cameras. Sharing the history and beauty of analogue photography.", "contactInfo": { "email": "hello@vintagefinds.photo", "website": "vintagefinds.photo", "store": "https://vintagefinds.store" }, "social": { "linkedin": "vintage-finds-co", "instagram": "vintage_finds" }, "metrics": { "collection": 250, "members": "55K", "trades": 100 } },
+  { "id": 15, "name": "Dr. Ben Carter", "title": "Tutor for Advanced Calculus", "company": "Carter Tutoring", "location": "Online", "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "1.2K", "engagement": "N/A", "verified": true, "tags": ["Tutor", "Calculus", "Mathematics", "Online Tutoring", "Advanced"], "summary": "PhD in Mathematics offering online tutoring for advanced calculus and other university-level math subjects.", "contactInfo": { "email": "dr.bencarter@tutoring.com", "website": "cartertutoring.com" }, "social": { "linkedin": "ben-carter-phd", "instagram": "drcartermath" }, "metrics": { "students": 150, "passRate": "99%", "response": "< 8h" } },
+  { "id": 19, "name": "Hiroshi Tanaka", "title": "AI/ML Engineer", "company": "Google", "location": "San Francisco, USA", "avatar": "https://images.unsplash.com/photo-1543132643-2d237000b991?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "15K", "engagement": "9.9%", "verified": true, "tags": ["AI/ML", "Python", "Deep Learning", "San Francisco", "Developer"], "summary": "AI/ML Engineer at Google in San Francisco, working on large language models. Passionate about Python and pushing the boundaries of artificial intelligence.", "contactInfo": { "email": "h.tanaka.ai@email.com", "website": "hiroshiai.dev" }, "social": { "linkedin": "hiroshi-tanaka-ai", "instagram": "hiroshi_ai", "twitter": "hiroshi_ai" }, "metrics": { "papers": 5, "patents": 2, "experience": "7+ years" } },
+  { "id": 20, "name": "Sophie Dubois", "title": "Cybersecurity Analyst", "company": "BNP Paribas", "location": "London, UK", "avatar": "https://images.unsplash.com/photo-1629872434228-91273988a038?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "8K", "engagement": "6.1%", "verified": false, "tags": ["Cybersecurity", "Threat Intelligence", "Finance", "5+ years experience", "London"], "summary": "Cybersecurity analyst in London with over 5+ years of experience in the financial sector.", "contactInfo": { "email": "sophie.dubois.sec@email.com" }, "social": { "linkedin": "sophie-dubois-sec", "instagram": "sophie_dubois_sec" }, "metrics": { "incidents": 200, "satisfaction": "98%", "experience": "6 years" } },
+  { "id": 25, "name": "Omar Hassan", "title": "Python Developer", "company": "Microsoft", "location": "San Francisco, USA", "avatar": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "7.5K", "engagement": "5.0%", "verified": true, "tags": ["Python", "Cloud", "Azure", "Developer", "San Francisco", "AI/ML"], "summary": "Cloud-focused Python developer in San Francisco, working on the Azure platform. I use AI/ML in my work.", "contactInfo": { "email": "omar.hassan.dev@email.com", "website": "omarhassan.dev" }, "social": { "linkedin": "omar-hassan-dev", "instagram": "omarhassan_dev", "twitter": "omar_cloud_dev" }, "metrics": { "certs": 5, "projects": 22, "experience": "6 years" } },
+  { "id": 26, "name": "EcoThreads Nigeria", "title": "Sustainable Fashion Brand", "company": "EcoThreads Nigeria", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop", "rating": 4.7, "followers": "45K", "engagement": "9.1%", "verified": true, "tags": ["Sustainable", "Fashion", "Brand", "Eco-Friendly", "Nigeria", "social media"], "summary": "Leading sustainable fashion brand in Nigeria promoting African textiles and ethical production. We have a strong social media presence.", "contactInfo": { "email": "hello@ecothreads.ng", "website": "ecothreads.ng", "store": "https://ecothreads.ng/shop" }, "social": { "linkedin": "ecothreads-nigeria", "instagram": "ecothreads_ng", "twitter": "ecothreads", "facebook": "EcoThreadsNigeria" }, "metrics": { "revenue": "$25K+", "satisfaction": "94%", "sustainability": "A+" } },
+  { "id": 27, "name": "Productiv.ly", "title": "SaaS Startup", "company": "Productiv.ly", "location": "Berlin, Germany", "avatar": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=150&h=150&fit=crop", "rating": 4.8, "followers": "18K", "engagement": "6.3%", "verified": true, "tags": ["SaaS", "Productivity Tools", "Startup", "Europe"], "summary": "A leading SaaS startup in Europe specializing in productivity tools for remote teams.", "contactInfo": { "email": "hello@productiv.ly", "website": "productiv.ly", "store": "https://productiv.ly/pricing" }, "social": { "linkedin": "productivly-app", "instagram": "productiv.ly_app", "twitter": "productivly" }, "metrics": { "mrr": "$50K+", "users": "10K+", "churn": "2.5%" } },
+  { "id": 28, "name": "The Gourmet Spot", "title": "Eco-Friendly Restaurant", "company": "The Gourmet Spot", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=150&h=150&fit=crop", "rating": 4.9, "followers": "22K", "engagement": "7.5%", "verified": true, "tags": ["Restaurant", "Eco-Friendly", "Farm-to-Table", "Lagos", "Delivery"], "summary": "An eco-friendly restaurant in Lagos, offering a farm-to-table dining experience. We offer delivery services.", "contactInfo": { "email": "bookings@gourmetspot.ng", "website": "gourmetspot.ng", "store": "https://gourmetspot.ng/menu" }, "social": { "linkedin": "the-gourmet-spot", "instagram": "thegourmetspot", "facebook": "TheGourmetSpot" }, "metrics": { "covers": 120, "satisfaction": "97%", "sustainability": "A" } },
+  { "id": 29, "name": "Thandie Mbeki", "title": "Fitness Coach & Influencer", "company": "FitLife SA", "location": "Cape Town, South Africa", "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "245K", "engagement": "12.3%", "verified": true, "tags": ["Fitness", "Influencer", "Wellness", "South Africa", "100k followers"], "summary": "Certified fitness trainer and wellness coach in South Africa. Over 100k followers.", "contactInfo": { "email": "thandie@fitlifesa.com", "website": "fitlifesa.com" }, "social": { "linkedin": "thandie-mbeki-fit", "instagram": "thandie_fitlife", "twitter": "thandie_fitness" }, "metrics": { "views": "85K", "engagement": "12.3%", "partners": 25 } },
+  { "id": 30, "name": "Kwame Mensah", "title": "Tech Content Creator", "company": "TechTribe", "location": "Nairobi, Kenya", "avatar": "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "120K", "engagement": "7.8%", "verified": true, "tags": ["Tech", "Content Creator", "YouTube", "Gadgets", "engagement 5%"], "summary": "YouTube tech content creator with an engagement rate over 5%. Known for honest gadget reviews.", "contactInfo": { "email": "kwame@techtribeworld.com", "website": "techtribeworld.com" }, "social": { "linkedin": "kwame-mensah-tech", "instagram": "kwame_techtribe", "twitter": "kwame_techtribe", "youtube": "TechTribe" }, "metrics": { "subs": "120K", "engagement": "7.8%", "views": "55K" } },
+  { "id": 31, "name": "Jasmine Okoro", "title": "Beauty Influencer", "company": "Jasmine's Glow", "location": "Accra, Ghana", "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "350K", "engagement": "15.1%", "verified": true, "tags": ["Beauty", "Influencer", "Skincare", "Natural Products", "West Africa"], "summary": "West Africa's leading beauty influencer focusing on natural and locally-sourced products.", "contactInfo": { "email": "collab@jasmineglow.com", "website": "jasmineglow.com" }, "social": { "linkedin": "jasmine-okoro-glow", "instagram": "jasminesglow", "youtube": "JasmineGlowTV" }, "metrics": { "likes": "45K", "engagement": "15.1%", "deals": 40 } },
+  { "id": 32, "name": "Femi Adeboye", "title": "UX Designer", "company": "OPay", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "7.2K", "engagement": "5.1%", "verified": true, "tags": ["UX Design", "Fintech", "Mobile Payments", "Lagos"], "summary": "UX designer with solid experience in the fintech space, currently improving mobile payments in Lagos.", "contactInfo": { "email": "femi.a@email.com", "website": "femiadeboye.design" }, "social": { "linkedin": "femi-adeboye-ux", "instagram": "femi_adeboye_ux" }, "metrics": { "projects": 28, "satisfaction": "97%", "response": "< 4h" } },
+  { "id": 33, "name": "Chloe White", "title": "Cybersecurity Consultant", "company": "PwC", "location": "London, UK", "avatar": "https://images.unsplash.com/photo-1491349174775-aaafddd81942?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "18K", "engagement": "8.5%", "verified": true, "tags": ["Cybersecurity", "Consultant", "Risk Management", "London", "5+ years experience"], "summary": "A cybersecurity consultant in London with 5+ years experience. I help businesses manage digital risk.", "contactInfo": { "email": "chloe.w@email.com" }, "social": { "linkedin": "chloe-white-cyber", "instagram": "chloewhite_cyber" }, "metrics": { "clients": 60, "satisfaction": "99%", "experience": "7 years" } },
+  { "id": 34, "name": "Kenji Yamamoto", "title": "Python Developer (AI/ML)", "company": "OpenAI", "location": "San Francisco, USA", "avatar": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "22K", "engagement": "11.3%", "verified": true, "tags": ["Python", "AI/ML", "Developer", "San Francisco"], "summary": "Python developer on the leading edge of AI/ML research in San Francisco.", "contactInfo": { "email": "kenji.y@email.com", "website": "kenjiyamamoto.ai" }, "social": { "linkedin": "kenji-yamamoto-ai", "instagram": "kenji_yamamoto_ai", "twitter": "kenji_ai" }, "metrics": { "models": 12, "accuracy": "99.8%", "response": "< 12h" } },
+  { "id": 35, "name": "AdireLuxe", "title": "Sustainable Fashion Brand", "company": "AdireLuxe", "location": "Ibadan, Nigeria", "avatar": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=150&h=150&fit=crop", "rating": 4.9, "followers": "80K", "engagement": "12.5%", "verified": true, "tags": ["Sustainable", "Fashion", "Brand", "Adire", "Nigeria", "social media"], "summary": "A Nigerian sustainable fashion brand with a strong social media following. We specialize in modern Adire.", "contactInfo": { "email": "hello@adireluxe.com", "website": "adireluxe.com", "store": "https://adireluxe.com/shop" }, "social": { "linkedin": "adireluxe-brand", "instagram": "adireluxe" }, "metrics": { "sales": "15K+", "followers": "80K", "sustainability": "A" } },
+  { "id": 36, "name": "TaskFlow", "title": "SaaS Startup", "company": "TaskFlow", "location": "Lisbon, Portugal", "avatar": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=150&h=150&fit=crop", "rating": 4.7, "followers": "12K", "engagement": "5.8%", "verified": true, "tags": ["SaaS", "Productivity Tools", "Startup", "Europe"], "summary": "European SaaS startup building productivity tools to help teams achieve more.", "contactInfo": { "email": "support@taskflow.app", "website": "taskflow.app", "store": "https://taskflow.app/signup" }, "social": { "linkedin": "taskflow-app", "instagram": "taskflow_app", "twitter": "taskflow" }, "metrics": { "mrr": "$30K+", "users": "8K+", "churn": "3.1%" } },
+  { "id": 37, "name": "Lagos Greens", "title": "Eco-Friendly Restaurant", "company": "Lagos Greens", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=150&h=150&fit=crop", "rating": 4.8, "followers": "35K", "engagement": "8.1%", "verified": true, "tags": ["Restaurant", "Eco-Friendly", "Vegan", "Lagos", "Delivery"], "summary": "Lagos' first fully vegan eco-friendly restaurant. We offer a city-wide delivery service.", "contactInfo": { "email": "orders@lagosgreens.ng", "website": "lagosgreens.ng", "store": "https://lagosgreens.ng/order" }, "social": { "linkedin": "lagos-greens-restaurant", "instagram": "lagosgreens", "facebook": "LagosGreens" }, "metrics": { "orders": 250, "satisfaction": "98%", "sustainability": "A+" } },
+  { "id": 38, "name": "Zola Nkosi", "title": "Fitness Influencer", "company": "ZolaFit", "location": "Durban, South Africa", "avatar": "https://images.unsplash.com/photo-1583454110551-21f2fa2a88ca?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "155K", "engagement": "9.2%", "verified": true, "tags": ["Fitness", "Influencer", "HIIT", "South Africa", "100k followers"], "summary": "Fitness influencer from South Africa with over 100k followers, specializing in high-intensity workouts.", "contactInfo": { "email": "collab@zolafit.com", "website": "zolafit.com" }, "social": { "linkedin": "zola-nkosi-fit", "instagram": "zolafit" }, "metrics": { "followers": "155K", "engagement": "9.2%", "partners": 18 } },
+  { "id": 39, "name": "Tech Explained", "title": "Tech Content Creator", "company": "Tech Explained", "location": "Online", "avatar": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?w=150&h=150&fit=crop", "rating": 5.0, "followers": "500K", "engagement": "8.0%", "verified": true, "tags": ["Tech", "Content Creator", "YouTube", "Software", "engagement 5%"], "summary": "I make complex tech simple on YouTube. My engagement rate is consistently above 5%.", "contactInfo": { "email": "contact@techexplained.io", "website": "techexplained.io" }, "social": { "linkedin": "tech-explained-channel", "instagram": "tech_explained", "youtube": "TechExplained" }, "metrics": { "subs": "500K", "engagement": "8.0%", "views": "200K" } },
+  { "id": 40, "name": "Aïcha Traoré", "title": "Beauty Influencer", "company": "Aïcha's Beauty", "location": "Dakar, Senegal", "avatar": "https://images.unsplash.com/photo-1596424555760-11223643168b?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "180K", "engagement": "14.2%", "verified": true, "tags": ["Beauty", "Influencer", "Makeup", "Natural Products", "West Africa"], "summary": "A beauty influencer from West Africa dedicated to showcasing makeup with natural products.", "contactInfo": { "email": "aicha@beauty.com", "website": "aichabeauty.com" }, "social": { "linkedin": "aicha-traore-beauty", "instagram": "aichabeauty" }, "metrics": { "likes": "35K", "engagement": "14.2%", "deals": 25 } },
+  { "id": 41, "name": "Ifeoma Okafor", "title": "Yoga Instructor", "company": "Zenith Yoga Lagos", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "22K", "engagement": "12.1%", "verified": true, "tags": ["Yoga", "Vinyasa Flow", "Instructor", "Lagos"], "summary": "A Lagos-based yoga instructor renowned for my dynamic Vinyasa flow classes.", "contactInfo": { "email": "ifeoma.yoga@email.com", "website": "zenithyoga.ng" }, "social": { "linkedin": "ifeoma-okafor-yoga", "instagram": "ifeoma_zenith_yoga" }, "metrics": { "students": "1K+", "rating": "5.0/5", "response": "< 5h" } },
+  { "id": 42, "name": "Analog Dreams", "title": "Vintage Camera Collector", "company": "Analog Dreams", "location": "Online", "avatar": "https://images.unsplash.com/photo-1510018431835-b2512f4e3c5a?w=150&h=150&fit=crop", "rating": 4.9, "followers": "85K", "engagement": "14.5%", "verified": true, "tags": ["Vintage", "Camera", "Collector", "Film", "Enthusiast"], "summary": "A passionate collector and enthusiast of vintage film cameras. Join our community of film lovers.", "contactInfo": { "email": "hello@analogdreams.com", "website": "analogdreams.com", "store": "https://analogdreams.com/shop" }, "social": { "linkedin": "analog-dreams-vintage", "instagram": "analog_dreams" }, "metrics": { "collection": 400, "followers": "85K", "trades": 250 } },
+  { "id": 43, "name": "Professor Mills", "title": "Advanced Calculus Tutor", "company": "University of London", "location": "Online", "avatar": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "5K", "engagement": "N/A", "verified": true, "tags": ["Tutor", "Advanced", "Calculus", "Online", "Mathematics"], "summary": "University professor offering specialized online tutoring in advanced calculus.", "contactInfo": { "email": "prof.mills@tutoring.com", "website": "proftutoring.com" }, "social": { "linkedin": "prof-mills-math", "instagram": "profmills_math" }, "metrics": { "students": "200+", "passRate": "99.5%", "experience": "20+ years" } },
+  { "id": 44, "name": "Nneka Eze", "title": "UX Designer", "company": "Carbon", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "10K", "engagement": "7.1%", "verified": true, "tags": ["UX Design", "Fintech", "Lagos"], "summary": "A skilled UX designer in Lagos with deep experience in the fintech sector.", "contactInfo": { "email": "nneka.e@email.com", "website": "nnekaeze.design" }, "social": { "linkedin": "nneka-eze-ux", "instagram": "nnekaeze_ux" }, "metrics": { "projects": 30, "satisfaction": "98%", "response": "< 2h" } },
+  { "id": 45, "name": "James Smith", "title": "Cybersecurity Expert", "company": "BAE Systems", "location": "London, UK", "avatar": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "30K", "engagement": "9.1%", "verified": true, "tags": ["Cybersecurity", "Expert", "London", "5+ years experience"], "summary": "Cybersecurity expert in London. I have over 5+ years of experience in the defense sector.", "contactInfo": { "email": "j.smith@email.com" }, "social": { "linkedin": "james-smith-cyber", "instagram": "jamessmith_cyber" }, "metrics": { "projects": 100, "clearance": "Top Secret", "experience": "12 years" } },
+  { "id": 46, "name": "Anita Singh", "title": "Python Developer (AI/ML)", "company": "Apple", "location": "San Francisco, USA", "avatar": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "18K", "engagement": "10.1%", "verified": true, "tags": ["Python", "AI/ML", "Developer", "San Francisco"], "summary": "Python developer working on core AI/ML frameworks in San Francisco.", "contactInfo": { "email": "anita.s@email.com", "website": "anitasingh.dev" }, "social": { "linkedin": "anita-singh-ai", "instagram": "anitasingh_ai" }, "metrics": { "commits": "8K+", "projects": 40, "experience": "9 years" } },
+  { "id": 47, "name": "Kente Weavers", "title": "Sustainable Fashion Brand", "company": "Kente Weavers", "location": "Accra, Ghana", "avatar": "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=150&h=150&fit=crop", "rating": 4.9, "followers": "120K", "engagement": "13.1%", "verified": true, "tags": ["Sustainable", "Fashion", "Brand", "Kente", "Nigeria", "social media"], "summary": "We are a Nigerian and Ghanaian sustainable fashion brand with a significant social media footprint.", "contactInfo": { "email": "hello@kenteweavers.com", "website": "kenteweavers.com", "store": "https://kenteweavers.com/collections" }, "social": { "linkedin": "kente-weavers-gh", "instagram": "kenteweavers", "facebook": "KenteWeavers" }, "metrics": { "weavers": 50, "exports": "20+", "sustainability": "A+" } },
+  { "id": 48, "name": "ConnectSphere", "title": "SaaS Startup", "company": "ConnectSphere", "location": "Amsterdam, Netherlands", "avatar": "https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=150&h=150&fit=crop", "rating": 4.8, "followers": "25K", "engagement": "7.2%", "verified": true, "tags": ["SaaS", "Productivity Tools", "Startup", "Europe", "Collaboration"], "summary": "A European SaaS startup. Our productivity tools are designed for team collaboration.", "contactInfo": { "email": "team@connectsphere.com", "website": "connectsphere.com", "store": "https://connectsphere.com/pricing" }, "social": { "linkedin": "connectsphere-app", "instagram": "connectsphere_app" }, "metrics": { "mrr": "$80K+", "users": "22K+", "churn": "2.1%" } },
+  { "id": 49, "name": "FarmBite Lagos", "title": "Eco-Friendly Restaurant", "company": "FarmBite Lagos", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1504754524776-8f4f37790774?w=150&h=150&fit=crop", "rating": 4.9, "followers": "50K", "engagement": "9.5%", "verified": true, "tags": ["Restaurant", "Eco-Friendly", "Organic", "Lagos", "Delivery"], "summary": "Organic and eco-friendly restaurant in Lagos with a dedicated delivery fleet.", "contactInfo": { "email": "eat@farmbite.ng", "website": "farmbite.ng", "store": "https://farmbite.ng/delivery" }, "social": { "linkedin": "farmbite-lagos", "instagram": "farmbitelagos", "facebook": "FarmBiteLagos" }, "metrics": { "tables": 40, "rating": "4.9/5", "sustainability": "A" } },
+  { "id": 50, "name": "Tunde Ojo", "title": "Fitness Influencer", "company": "Tunde Fit", "location": "Johannesburg, South Africa", "avatar": "https://images.unsplash.com/photo-1548690312-e3b511d5b110?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "300K", "engagement": "10.5%", "verified": true, "tags": ["Fitness", "Influencer", "Calisthenics", "South Africa", "100k followers"], "summary": "A top fitness influencer in South Africa with 300k followers. I focus on calisthenics.", "contactInfo": { "email": "tunde@tundefit.com", "website": "tundefit.com" }, "social": { "linkedin": "tunde-ojo-fit", "instagram": "tunde_fit" }, "metrics": { "followers": "300K", "engagement": "10.5%", "partners": 30 } },
+  { "id": 51, "name": "Code Explained", "title": "Tech Content Creator", "company": "Code Explained", "location": "Online", "avatar": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=150&h=150&fit=crop", "rating": 4.9, "followers": "250K", "engagement": "9.1%", "verified": true, "tags": ["Tech", "Content Creator", "YouTube", "Programming", "engagement 5%"], "summary": "I create programming tutorials on YouTube. My channel has a high engagement rate (over 5%).", "contactInfo": { "email": "collab@codeexplained.dev", "website": "codeexplained.dev" }, "social": { "linkedin": "code-explained-tv", "instagram": "code_explained", "youtube": "CodeExplained" }, "metrics": { "subs": "250K", "engagement": "9.1%", "views": "150K" } },
+  { "id": 52, "name": "Fatou Diallo", "title": "Beauty Influencer", "company": "Fatou's Finds", "location": "Abidjan, Ivory Coast", "avatar": "https://images.unsplash.com/photo-1597471214227-1a27e7f54b35?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "220K", "engagement": "16.1%", "verified": true, "tags": ["Beauty", "Influencer", "Natural Products", "West Africa"], "summary": "I am a leading beauty influencer in West Africa, sharing the best natural products.", "contactInfo": { "email": "fatou@finds.com", "website": "fatousfinds.com" }, "social": { "linkedin": "fatou-diallo-finds", "instagram": "fatousfinds" }, "metrics": { "likes": "40K", "engagement": "16.1%", "deals": 28 } },
+  { "id": 53, "name": "Ayo Fitness", "title": "Yoga Instructor", "company": "Ayo Yoga", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "18K", "engagement": "11.5%", "verified": true, "tags": ["Yoga", "Vinyasa Flow", "Instructor", "Lagos"], "summary": "Lagos-based yoga instructor teaching Vinyasa flow for all levels.", "contactInfo": { "email": "ayo@yogang.com", "website": "ayogang.com" }, "social": { "linkedin": "ayo-fitness-yoga", "instagram": "ayo_yoga_ng" }, "metrics": { "classes": "800+", "rating": "4.9/5", "response": "< 8h" } },
+  { "id": 54, "name": "The Film Roll", "title": "Vintage Camera Collector", "company": "The Film Roll", "location": "Online", "avatar": "https://images.unsplash.com/photo-1502920514338-783e93be2cfd?w=150&h=150&fit=crop", "rating": 5.0, "followers": "150K", "engagement": "15.2%", "verified": true, "tags": ["Vintage", "Camera", "Collector", "Leica", "Enthusiast"], "summary": "An enthusiast and collector of rare vintage cameras, with a focus on Leica models.", "contactInfo": { "email": "contact@thefilmroll.com", "website": "thefilmroll.com", "store": "https://thefilmroll.com/inventory" }, "social": { "linkedin": "the-film-roll", "instagram": "the_film_roll" }, "metrics": { "collection": 600, "followers": "150K", "trades": 400 } },
+  { "id": 55, "name": "Dr. Evelyn Reed", "title": "Calculus Tutor", "company": "PhD Tutors", "location": "Online", "avatar": "https://images.unsplash.com/photo-1521124976458-89a19597f8c8?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "8K", "engagement": "N/A", "verified": true, "tags": ["Tutor", "Advanced", "Calculus", "Online", "PhD"], "summary": "I offer online tutoring services for students taking advanced calculus.", "contactInfo": { "email": "e.reed@phdtutors.com", "website": "phdtutors.com" }, "social": { "linkedin": "evelyn-reed-phd", "instagram": "evelynreed_math" }, "metrics": { "students": "300+", "passRate": "100%", "experience": "15+ years" } },
+  { "id": 56, "name": "Bisi Adewale", "title": "UX Designer (Fintech)", "company": "PiggyVest", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "9.5K", "engagement": "6.8%", "verified": true, "tags": ["UX Design", "Fintech", "Lagos"], "summary": "Passionate UX designer based in Lagos with extensive fintech experience.", "contactInfo": { "email": "bisi.a@email.com", "website": "bisiadewale.io" }, "social": { "linkedin": "bisi-adewale-ux", "instagram": "bisiadewale_ux" }, "metrics": { "projects": 35, "satisfaction": "99%", "response": "< 3h" } },
+  { "id": 57, "name": "Harry Wilson", "title": "Senior Cybersecurity Expert", "company": "Darktrace", "location": "London, UK", "avatar": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "40K", "engagement": "11.2%", "verified": true, "tags": ["Cybersecurity", "Expert", "AI", "London", "5+ years experience"], "summary": "Senior cybersecurity expert in London. My experience spans over 5+ years, specializing in AI-driven threat detection.", "contactInfo": { "email": "h.wilson@email.com" }, "social": { "linkedin": "harry-wilson-cyber", "instagram": "harrywilson_cyber" }, "metrics": { "threats": "5K+", "accuracy": "99.9%", "experience": "15 years" } },
+  { "id": 58, "name": "Priya Patel", "title": "AI/ML Developer", "company": "Meta", "location": "San Francisco, USA", "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "25K", "engagement": "12.0%", "verified": true, "tags": ["Python", "AI/ML", "Developer", "PyTorch", "San Francisco"], "summary": "AI/ML developer in San Francisco building next-gen models with Python and PyTorch.", "contactInfo": { "email": "priya.p@email.com" }, "social": { "linkedin": "priya-patel-ai", "instagram": "priyapatel_ai" }, "metrics": { "commits": "10K+", "projects": 50, "experience": "10 years" } },
+  { "id": 59, "name": "Ankara Plains", "title": "Sustainable Fashion Brand", "company": "Ankara Plains", "location": "Abuja, Nigeria", "avatar": "https://images.unsplash.com/photo-1581403341630-a6e5b3712558?w=150&h=150&fit=crop", "rating": 4.8, "followers": "95K", "engagement": "11.8%", "verified": true, "tags": ["Sustainable", "Fashion", "Brand", "Ankara", "Nigeria", "social media"], "summary": "A top sustainable fashion brand out of Nigeria with a vibrant social media community.", "contactInfo": { "email": "shop@ankaraplains.com", "website": "ankaraplains.com", "store": "https://ankaraplains.com/new-arrivals" }, "social": { "linkedin": "ankara-plains", "instagram": "ankaraplains", "facebook": "AnkaraPlains" }, "metrics": { "pieces_sold": "20K+", "followers": "95K", "sustainability": "A" } },
+  { "id": 60, "name": "Zenith Suite", "title": "SaaS Startup", "company": "Zenith Suite", "location": "Stockholm, Sweden", "avatar": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=150&h=150&fit=crop", "rating": 4.9, "followers": "30K", "engagement": "8.0%", "verified": true, "tags": ["SaaS", "Productivity Tools", "Startup", "Europe", "Project Management"], "summary": "The premier European SaaS with productivity tools for project management.", "contactInfo": { "email": "hello@zenithsuite.com", "website": "zenithsuite.com", "store": "https://zenithsuite.com/plans" }, "social": { "linkedin": "zenithsuite", "instagram": "zenithsuite_app" }, "metrics": { "mrr": "$120K+", "users": "35K+", "churn": "1.9%" } },
+  { "id": 61, "name": "Green Canteen", "title": "Eco-Friendly Restaurant", "company": "Green Canteen", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1550931514-e36b04457945?w=150&h=150&fit=crop", "rating": 4.8, "followers": "42K", "engagement": "8.8%", "verified": true, "tags": ["Restaurant", "Eco-Friendly", "Healthy", "Lagos", "Delivery"], "summary": "An eco-friendly spot in Lagos for healthy meals. Fast delivery is available.", "contactInfo": { "email": "eat@greencanteen.ng", "website": "greencanteen.ng", "store": "https://greencanteen.ng/order-now" }, "social": { "linkedin": "green-canteen-lagos", "instagram": "greencanteen_ng" }, "metrics": { "orders": 300, "rating": "4.8/5", "sustainability": "A-" } },
+  { "id": 62, "name": "Siya Kolisi Fit", "title": "Fitness Influencer", "company": "SK Fit", "location": "Cape Town, South Africa", "avatar": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "1.5M", "engagement": "15.0%", "verified": true, "tags": ["Fitness", "Influencer", "Rugby", "South Africa", "100k followers"], "summary": "A rugby player and fitness influencer from South Africa with well over 100k followers.", "contactInfo": { "email": "contact@siyakolisi.com", "website": "siyakolisi.com" }, "social": { "linkedin": "siya-kolisi", "instagram": "siyakolisi" }, "metrics": { "followers": "1.5M", "engagement": "15.0%", "partners": 50 } },
+  { "id": 63, "name": "GadgetGirl", "title": "Tech Content Creator", "company": "GadgetGirl", "location": "Online", "avatar": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "450K", "engagement": "10.2%", "verified": true, "tags": ["Tech", "Content Creator", "YouTube", "Reviews", "engagement 5%"], "summary": "Unboxing the latest tech on YouTube. My channel's engagement rate is more than 5%.", "contactInfo": { "email": "gg@gadgetgirl.tv", "website": "gadgetgirl.tv" }, "social": { "linkedin": "gadgetgirl-reviews", "instagram": "gadgetgirl_tv", "youtube": "GadgetGirl" }, "metrics": { "subs": "450K", "engagement": "10.2%", "views": "180K" } },
+  { "id": 64, "name": "Adaeze Organics", "title": "Beauty Influencer", "company": "Adaeze Organics", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1600985923954-e0e625a65a43?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "280K", "engagement": "15.5%", "verified": true, "tags": ["Beauty", "Influencer", "Natural Products", "West Africa", "Skincare"], "summary": "From West Africa, I'm a beauty influencer focused on organic and natural skincare products.", "contactInfo": { "email": "collab@adaeze.com", "website": "adaezeorganics.com" }, "social": { "linkedin": "adaeze-organics", "instagram": "adaezeorganics" }, "metrics": { "likes": "45K", "engagement": "15.5%", "deals": 35 } },
+  { "id": 65, "name": "Shanti Flow", "title": "Yoga Instructor", "company": "Shanti Flow", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1591291621226-97458d7544d3?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "25K", "engagement": "13.0%", "verified": true, "tags": ["Yoga", "Vinyasa Flow", "Instructor", "Lagos"], "summary": "I teach Vinyasa flow at my studio in Lagos and online. Join my yoga community.", "contactInfo": { "email": "flow@shantiyoga.ng", "website": "shantiyoga.ng" }, "social": { "linkedin": "shanti-flow-yoga", "instagram": "shantiflow_ng" }, "metrics": { "students": "1.5K+", "rating": "4.9/5", "response": "< 6h" } },
+  { "id": 66, "name": "Lens Legacy", "title": "Vintage Camera Collector", "company": "Lens Legacy", "location": "Online", "avatar": "https://images.unsplash.com/photo-1520342899-79a066a33f41?w=150&h=150&fit=crop", "rating": 4.9, "followers": "110K", "engagement": "14.8%", "verified": true, "tags": ["Vintage", "Camera", "Collector", "Nikon", "Enthusiast"], "summary": "A dedicated enthusiast and collector of classic vintage cameras, especially old Nikons.", "contactInfo": { "email": "support@lenslegacy.com", "website": "lenslegacy.com", "store": "https://lenslegacy.com/available" }, "social": { "linkedin": "lens-legacy-vintage", "instagram": "lens_legacy" }, "metrics": { "collection": 750, "followers": "110K", "trades": 550 } },
+  { "id": 67, "name": "Math Whiz", "title": "Advanced Calculus Tutor", "company": "Math Whiz Online", "location": "Online", "avatar": "https://images.unsplash.com/photo-1531123414780-f74242c2b052?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "12K", "engagement": "N/A", "verified": false, "tags": ["Tutor", "Advanced", "Calculus", "Online", "STEM"], "summary": "I provide online tutoring to help students conquer advanced calculus.", "contactInfo": { "email": "help@mathwhiz.online", "website": "mathwhiz.online" }, "social": { "linkedin": "math-whiz-tutoring", "instagram": "mathwhiz_online" }, "metrics": { "students": "500+", "passRate": "98%", "response": "< 24h" } },
+  { "id": 68, "name": "Chioma James", "title": "Senior UX Designer", "company": "Konga", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face", "rating": 4.7, "followers": "5.5K", "engagement": "4.9%", "verified": true, "tags": ["UX Design", "E-commerce", "Lagos", "Fintech"], "summary": "Senior UX designer in Lagos with experience in e-commerce and fintech payment gateways.", "contactInfo": { "email": "chioma.j@email.com", "website": "chiomajames.design" }, "social": { "linkedin": "chioma-james-ux", "instagram": "chiomajames_ux" }, "metrics": { "projects": 40, "satisfaction": "95%", "response": "< 8h" } },
+  { "id": 69, "name": "Alice Williams", "title": "Principal Cybersecurity Expert", "company": "Mandiant", "location": "London, UK", "avatar": "https://images.unsplash.com/photo-1548142813-c348350df52b?w=150&h=150&fit=crop&crop=face", "rating": 5.0, "followers": "55K", "engagement": "12.5%", "verified": true, "tags": ["Cybersecurity", "Expert", "Incident Response", "London", "5+ years experience"], "summary": "Principal cybersecurity expert in London. My experience in incident response is well over 5+ years.", "contactInfo": { "email": "a.williams@email.com" }, "social": { "linkedin": "alice-williams-cyber", "instagram": "alicewilliams_cyber", "twitter": "alice_cyber" }, "metrics": { "breaches": 50, "response": "< 1h", "experience": "18 years" } },
+  { "id": 70, "name": "Mohammed Al-Jamil", "title": "Senior Python Developer", "company": "Tesla", "location": "San Francisco, USA", "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "19K", "engagement": "9.8%", "verified": true, "tags": ["Python", "AI/ML", "Developer", "Autopilot", "San Francisco"], "summary": "Senior Python developer in San Francisco working on the Autopilot AI/ML team.", "contactInfo": { "email": "mo.jamil@email.com" }, "social": { "linkedin": "mo-al-jamil", "instagram": "mo_al_jamil" }, "metrics": { "linesOfCode": "2M+", "team": "Autopilot", "experience": "11 years" } },
+  { "id": 71, "name": "Adankwo Creations", "title": "Sustainable Fashion Brand", "company": "Adankwo Creations", "location": "Enugu, Nigeria", "avatar": "https://images.unsplash.com/photo-1551803091-e2ab692b3a34?w=150&h=150&fit=crop", "rating": 4.9, "followers": "150K", "engagement": "14.1%", "verified": true, "tags": ["Sustainable", "Fashion", "Brand", "Akwaocha", "Nigeria", "social media"], "summary": "Authentic, sustainable fashion from Nigeria. We have a powerful social media community.", "contactInfo": { "email": "orders@adankwo.com", "website": "adankwo.com", "store": "https://adankwo.com/shop" }, "social": { "linkedin": "adankwo-creations", "instagram": "adankwocreations", "facebook": "AdankwoCreations" }, "metrics": { "artisans": 100, "countries": "30+", "sustainability": "A+" } },
+  { "id": 72, "name": "FlowState", "title": "SaaS Startup", "company": "FlowState", "location": "Dublin, Ireland", "avatar": "https://images.unsplash.com/photo-1600880292210-f79a27a41d39?w=150&h=150&fit=crop", "rating": 4.8, "followers": "19K", "engagement": "6.9%", "verified": true, "tags": ["SaaS", "Productivity Tools", "Startup", "Europe", "Deep Work"], "summary": "A European SaaS startup providing productivity tools designed for deep work.", "contactInfo": { "email": "support@flowstate.com", "website": "flowstate.com", "store": "https://flowstate.com/try" }, "social": { "linkedin": "flowstate-app", "instagram": "flowstate_app" }, "metrics": { "mrr": "$95K+", "users": "28K+", "churn": "2.0%" } },
+  { "id": 73, "name": "The Herbivore", "title": "Eco-Friendly Restaurant", "company": "The Herbivore", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=150&h=150&fit=crop", "rating": 4.9, "followers": "60K", "engagement": "10.1%", "verified": true, "tags": ["Restaurant", "Eco-Friendly", "Vegetarian", "Lagos", "Delivery"], "summary": "Popular vegetarian eco-friendly restaurant in Lagos with fast and reliable delivery.", "contactInfo": { "email": "hello@theherbivore.ng", "website": "theherbivore.ng", "store": "https://theherbivore.ng/place-order" }, "social": { "linkedin": "the-herbivore-restaurant", "instagram": "theherbivore_ng" }, "metrics": { "dishes": 50, "rating": "4.9/5", "sustainability": "A" } },
+  { "id": 74, "name": "Fit Tobi", "title": "Fitness Influencer", "company": "Fit Tobi", "location": "Pretoria, South Africa", "avatar": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "190K", "engagement": "9.9%", "verified": true, "tags": ["Fitness", "Influencer", "Crossfit", "South Africa", "100k followers"], "summary": "Crossfit athlete and fitness influencer in South Africa with a community of over 100k followers.", "contactInfo": { "email": "tobi@fittobi.com", "website": "fittobi.com" }, "social": { "linkedin": "fit-tobi", "instagram": "fit_tobi" }, "metrics": { "followers": "190K", "engagement": "9.9%", "partners": 22 } },
+  { "id": 75, "name": "The Dev Life", "title": "Tech Content Creator", "company": "The Dev Life", "location": "Online", "avatar": "https://images.unsplash.com/photo-1579403124614-197f69d8187b?w=150&h=150&fit=crop&crop=face", "rating": 4.9, "followers": "320K", "engagement": "9.5%", "verified": true, "tags": ["Tech", "Content Creator", "YouTube", "Lifestyle", "engagement 5%"], "summary": "Sharing the lifestyle of a developer on YouTube. High engagement (over 5%) guaranteed.", "contactInfo": { "email": "devlife@creator.com", "website": "thedevlife.io" }, "social": { "linkedin": "the-dev-life-show", "instagram": "the_devlife", "youtube": "TheDevLife" }, "metrics": { "subs": "320K", "engagement": "9.5%", "views": "170K" } },
+  { "id": 76, "name": "Ghana Glow", "title": "Beauty Influencer", "company": "Ghana Glow", "location": "Kumasi, Ghana", "avatar": "https://images.unsplash.com/photo-1593529467220-9d721ceb9a78?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "150K", "engagement": "14.8%", "verified": true, "tags": ["Beauty", "Influencer", "Natural Products", "West Africa", "Haircare"], "summary": "Beauty influencer from West Africa, specializing in haircare and natural products.", "contactInfo": { "email": "glow@ghanaglow.com", "website": "ghanaglow.com" }, "social": { "linkedin": "ghana-glow", "instagram": "ghanaglow" }, "metrics": { "likes": "38K", "engagement": "14.8%", "deals": 32 } },
+  { "id": 77, "name": "Lagos Yoga Hub", "title": "Yoga Instructor Collective", "company": "Lagos Yoga Hub", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=150&h=150&fit=crop", "rating": 5.0, "followers": "30K", "engagement": "13.5%", "verified": true, "tags": ["Yoga", "Vinyasa Flow", "Instructor", "Lagos"], "summary": "A collective of Lagos' best yoga instructors. We offer daily Vinyasa flow classes.", "contactInfo": { "email": "info@lagosyoga.com", "website": "lagosyoga.com" }, "social": { "linkedin": "lagos-yoga-hub", "instagram": "lagosyogahub" }, "metrics": { "instructors": 15, "classes_day": 10, "rating": "5.0/5" } },
+  { "id": 78, "name": "Old Lens New Life", "title": "Vintage Camera Collector", "company": "Old Lens New Life", "location": "Online", "avatar": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=150&h=150&fit=crop", "rating": 4.9, "followers": "90K", "engagement": "14.1%", "verified": true, "tags": ["Vintage", "Camera", "Collector", "Canon", "Enthusiast"], "summary": "An online enthusiast and collector community for vintage Canon cameras.", "contactInfo": { "email": "info@oldlens.com", "website": "oldlens.com", "store": "https://oldlens.com/for-sale" }, "social": { "linkedin": "old-lens-new-life", "instagram": "oldlensnewlife" }, "metrics": { "collection": 800, "followers": "90K", "trades": 600 } },
+  { "id": 79, "name": "Calculus Solved", "title": "Advanced Calculus Tutoring Service", "company": "Calculus Solved", "location": "Online", "avatar": "https://images.unsplash.com/photo-1596495578065-64086e0d6e2e?w=150&h=150&fit=crop", "rating": 4.9, "followers": "20K", "engagement": "N/A", "verified": true, "tags": ["Tutor", "Advanced", "Calculus", "Online", "Exams"], "summary": "Online tutoring platform that solves all your advanced calculus problems.", "contactInfo": { "email": "support@calculussolved.com", "website": "calculussolved.com", "store": "https://calculussolved.com/enroll" }, "social": { "linkedin": "calculus-solved-inc", "instagram": "calculus_solved", "youtube": "CalculusSolved" }, "metrics": { "tutors": 50, "passRate": "99%", "response": "< 1h" } },
+  { "id": 80, "name": "Yemi Alade UX", "title": "UX Designer", "company": "TeamApt", "location": "Lagos, Nigeria", "avatar": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=150&h=150&fit=crop&crop=face", "rating": 4.8, "followers": "6.8K", "engagement": "5.2%", "verified": false, "tags": ["UX Design", "Fintech", "Lagos"], "summary": "I am a UX designer in Lagos with a passion for the fintech space. Great experience building user-centric products.", "contactInfo": { "email": "yemi.a.ux@email.com", "website": "yemialade.design" }, "social": { "linkedin": "yemi-alade-ux", "instagram": "yemi_alade_ux" }, "metrics": { "projects": 22, "satisfaction": "96%", "response": "< 5h" } }
 ]
