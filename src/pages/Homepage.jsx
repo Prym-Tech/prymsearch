@@ -12,12 +12,20 @@ import {
   ArrowRight,
   CheckCircle,
   Menu,
+  User,
+  ShoppingBag,
   X,
   Sparkles,
   Brain,
   Database,
-  MessageSquare
+  MessageSquare,
+  ArrowUpRight
 } from 'lucide-react';
+
+import Logo from '../assets/logos/logoL.png';
+import Ind from '../assets/logos/ind.png';
+import Shopper from '../assets/logos/shop.png';
+
 
 // Set the app element for react-modal
 Modal.setAppElement('#root'); // Or your app's root element
@@ -31,7 +39,7 @@ const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const closeModal = () => setIsModal(false);
 
 
   useEffect(() => {
@@ -104,11 +112,19 @@ const HomePage = () => {
     }
   ];
 
+  // const examples = [
+  //   "Looking for freelance graphic designers specializing in branding for tech startups in New York",
+  //   "Find fitness influencers in South Africa with 100k+ followers",
+  //   "Find me someone who offers online tutoring for digital marketing",
+  //   "Find furniture merchants around Lagos, Nigeria"
+  // ];
+
   const examples = [
-    "Looking for freelance graphic designers specializing in branding for tech startups in New York",
-    "Find fitness influencers in South Africa with 100k+ followers",
-    "Find me someone who offers online tutoring for digital marketing",
-    "Find furniture merchants around Lagos, Nigeria"
+    { text: "UX Designer with freelance experience in New York", icon: Ind },
+    { text: "Find eco-friendly restaurants in Lagos with delivery services", icon: Shopper },
+    { text: "Find fitness influencers in South Africa with 100k+ followers", icon: Ind },
+    { text: "Find me someone who offers online tutoring for digital marketing", icon: Ind },
+    { text: "Find furniture merchants around Lagos, Nigeria", icon: Shopper }
   ];
 
   // Auto-rotate examples
@@ -355,16 +371,16 @@ const HomePage = () => {
             transition: all 0.3s ease-out;
             transform: scale(0.98);
           }
-         
+          
           .example-item.active {
             transform: scale(1);
             box-shadow: 0 4px 15px rgba(0, 211, 127, 0.1);
           }
-         
+          
           .animate-float {
             animation: none;
           }
-         
+          
           .hover-lift:hover {
             transform: translateY(-4px);
           }
@@ -395,32 +411,32 @@ const HomePage = () => {
       `}</style>
 
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 backdrop-blur-lg shadow-sm ${
         scrollY > 50 ? 'bg-white/95 backdrop-blur-lg shadow-sm' : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
           <div className="flex justify-between items-center h-20">
-            <div className="text-2xl font-bold animate-slide-in-left" style={{color: '#121B00'}}>
-              Prymsearch
+            <div className="animate-slide-in-left">
+              <img src={Logo} className='w-[150px]' />
             </div>
-           
+            
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-12 animate-fade-in-up">
-              <a href="#features" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
+              <a href="#features" className="text-gray-700 text-sm hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
                 Features
               </a>
-              <a href="#how-it-works" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
+              <a href="#how-it-works" className="text-gray-700 text-sm hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
                 How it Works
               </a>
-              <a href="#pricing" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
+              <a href="#pricing" className="text-gray-700 text-sm hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
                 Pricing
               </a>
             </div>
 
             <div className="hidden md:flex items-center space-x-4 animate-slide-in-right">
-              <button className="text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-300 hover:scale-105 ripple" style={{backgroundColor: '#121B00'}}>
-                Join Waitlist
-              </button>
+              <button className="text-lgreen px-8 py-4 rounded-full font-medium text-sm hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
+                  <span>Join Waitlist</span>
+                </button>
             </div>
 
             {/* Mobile menu button */}
@@ -446,8 +462,9 @@ const HomePage = () => {
                   Pricing
                 </a>
                 <div className="px-4 pt-4">
-                  <button className="w-full text-white px-6 py-3 rounded-lg font-medium ripple" style={{backgroundColor: '#121B00'}}>
-                    Join Waitlist
+                  
+                  <button className="w-full text-lgreen px-8 py-4 rounded-full font-medium text-base hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
+                    <span>Join Waitlist</span>
                   </button>
                 </div>
               </div>
@@ -457,69 +474,84 @@ const HomePage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-35 lg:pt-38 pb-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center space-x-2 bg-gray-50 px-4 py-2 rounded-full animate-fade-in-up hover-lift">
-                <Sparkles className="w-4 h-4 animate-pulse-custom" style={{color: '#00D37F'}} />
+                <Zap className="w-4 h-4 animate-pulse-custom" style={{color: '# 1E1E1E'}} />
                 <span className="text-sm font-medium text-gray-700">Powered by Search AI 1.0</span>
               </div>
-             
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight gradient-text animate-slide-in-left">
-                The Google for Finding People
+              
+              <h1 className="text-[40px] lg:text-6xl font-semibold leading-tight gradient-text animate-slide-in-left">
+                The Google for<br /> Finding People
               </h1>
-             
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              
+              <p className="text-sm lg:text-base text-tgrey leading-relaxed max-w-lg animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                 Find the right people, businesses, and creators with AI precision. No more endless scrolling through social media or hit-or-miss cold outreach.
               </p>
-             
+              
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-                <button className="text-white px-8 py-4 rounded-lg font-medium text-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#121B00'}}>
+                <button className="text-lgreen px-8 py-4 rounded-full font-medium text-base hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
                   <span>Join Waitlist</span>
-                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
                 <button
                   onClick={openModal}
-                  className="cursor-pointer border-2 px-8 py-4 rounded-lg font-medium text-lg hover:border-opacity-60 transition-all duration-300 hover:scale-105 hover:bg-gray-50"
+                  className="cursor-pointer border-2 px-8 py-4 rounded-full font-medium text-base hover:border-opacity-60 transition-all duration-300 hover:scale-105 hover:bg-gray-50 flex items-center justify-center"
                   style={{borderColor: '#121B00', color: '#121B00'}}
                 >
-                  Watch Demo
+                  <span>Watch Demo</span>
+                  <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl p-8 lg:p-12 animate-slide-in-right animate-float">
-              <div className="space-y-6">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 animate-pulse-custom" />
+            <div className="pt-12 lg:pt-14 bg-gray-100 pl-8 flex items-center justify-center rounded-[32px]">
+              <div className="w-full space-y-4">
+                {/* Search Bar */}
+                <div className="relative mr-8">
                   <input
                     type="text"
-                    placeholder="Find B2B SaaS founders in Europe specializing in cybersecurity"
-                    className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 hover:shadow-md"
-                    style={{'--focus-ring-color': '#00D37F', '--focus-border-color': '#00D37F'}}
-                    onFocus={(e) => {
-                      e.target.style.ringColor = '#00D37F';
-                      e.target.style.borderColor = '#00D37F';
-                    }}
+                    placeholder="Find good food vendors online"
+                    className="w-full pl-4 pr-20 py-6 border-1 border-gray-400 rounded-full text-gray-900 placeholder-gray-600 focus:outline-none shadow-sm text-xs lg:text-sm"
                     readOnly
                   />
+                  <button 
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
+                    style={{ backgroundColor: '#161D25', color: '#B0D226' }}
+                  >
+                    <Search className="w-4 h-4 lg:w-5 lg:h-5" />
+                    Search
+                  </button>
                 </div>
-               
-                <div className="space-y-3">
-                  <p className="text-sm font-medium text-gray-700 mb-4">Try these examples:</p>
-                  {examples.map((example, index) => (
-                    <div
-                      key={index}
-                      className={`example-item bg-white p-4 rounded-lg border border-gray-100 hover:border-gray-200 cursor-pointer ${
-                        index === currentExampleIndex ? 'active' : ''
-                      }`}
-                    >
-                      <p className="text-gray-700 transition-colors duration-300">
-                        {example}
-                      </p>
-                    </div>
-                  ))}
+
+                {/* Examples Container */}
+                <div 
+                  className="overflow-hidden rounded-[32px] rounded-tr-[0] rounded-bl-[0] h-[340px] p-6 pr-0 space-y-4"
+                  style={{ backgroundColor: '#161D25' }}
+                >
+                  {examples.map((example, index) => {
+                    const IconComponent = example.icon;
+                    return (
+                      <div
+                        key={index}
+                        className={`flex items-start gap-3 p-3 rounded-2xl rounded-r-[0] bg-white/10 cursor-pointer transition-all duration-300 ${
+                          index === currentExampleIndex 
+                            ? 'bg-white/10  border-1 border-white transform scale-105' 
+                            : 'hover:bg-white/5 hover:border-1 hover:border-white'
+                        }`}
+                      >
+                        <div 
+                          className="w-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                        >
+                          <img src={IconComponent} className="w-[17px]" />
+                        </div>
+                        <p className="text-white text-xs lg:text-sm leading-relaxed">
+                          {example.text}
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -529,16 +561,16 @@ const HomePage = () => {
 
       {/* Features Section */}
       <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-20 animate-on-scroll">
-            <h2 className="text-4xl lg:text-5xl font-bold" style={{color: '#121B00'}}>
+            <h2 className="text-3xl lg:text-5xl font-semibold" style={{color: '#121B00'}}>
               Search the Right Way!
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our AI-powered Search AI technology delivers precise results where traditional platforms fail
             </p>
           </div>
-         
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {features.map((feature, index) => (
               <div
@@ -549,7 +581,7 @@ const HomePage = () => {
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-transform duration-300 hover:scale-110" style={{backgroundColor: '#00D37F', color: 'white'}}>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-4" style={{color: '#121B00'}}>
+                <h3 className="text-base font-semibold mb-4" style={{color: '#121B00'}}>
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -563,16 +595,16 @@ const HomePage = () => {
 
       {/* How it Works */}
       <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-20 animate-on-scroll">
-            <h2 className="text-4xl lg:text-5xl font-bold" style={{color: '#121B00'}}>
+            <h2 className="text-3xl lg:text-4xl font-bold" style={{color: '#121B00'}}>
               How Prymsearch Works
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Four simple steps to find exactly who you need
             </p>
           </div>
-         
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {steps.map((step, index) => (
               <div
@@ -583,10 +615,10 @@ const HomePage = () => {
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto animate-pulse-custom" style={{backgroundColor: '#F84F94', color: 'white'}}>
                   {step.icon}
                 </div>
-                <div className="w-8 h-8 text-white rounded-full flex items-center justify-center mx-auto font-bold text-lg transition-transform duration-300 hover:scale-110" style={{backgroundColor: '#121B00'}}>
+                <div className="w-8 h-8 text-white rounded-full flex items-center justify-center mx-auto font-bold text-base transition-transform duration-300 hover:scale-110" style={{backgroundColor: '#121B00'}}>
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-semibold" style={{color: '#121B00'}}>
+                <h3 className="text-base font-semibold" style={{color: '#121B00'}}>
                   {step.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -601,13 +633,13 @@ const HomePage = () => {
       {/* Waitlist Section */}
       <section id="waitlist" className="py-24 px-4 sm:px-6 lg:px-8" style={{backgroundColor: '#121B00'}}>
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white animate-fade-in-up">
+          <h2 className="text-xl lg:text-2xl font-bold text-white animate-fade-in-up">
             Ready to Find Anyone?
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             Join thousands of professionals, businesses, and creators who are discovering the power of AI-driven people search.
           </p>
-         
+          
           <div className="max-w-md mx-auto animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <div className="space-y-4">
               <input
@@ -623,7 +655,7 @@ const HomePage = () => {
               />
               <button
                 onClick={handleSubmit}
-                className="w-full px-8 py-4 rounded-lg font-medium text-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple"
+                className="w-full px-8 py-4 rounded-lg font-medium text-base hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple"
                 style={{backgroundColor: '#00D37F', color: '#121B00'}}
                 disabled={isSubmitted}
               >
@@ -646,10 +678,10 @@ const HomePage = () => {
 
       {/* Footer */}
       <footer className="text-white py-16 px-4 sm:px-6 lg:px-8" style={{backgroundColor: '#121B00'}}>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <div className="space-y-4 animate-fade-in-up">
-              <h3 className="text-lg font-semibold" style={{color: '#00D37F'}}>Product</h3>
+              <h3 className="text-base font-semibold" style={{color: '#00D37F'}}>Product</h3>
               <div className="space-y-2">
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Features</a>
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Pricing</a>
@@ -657,9 +689,9 @@ const HomePage = () => {
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Enterprise</a>
               </div>
             </div>
-           
+            
             <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              <h3 className="text-lg font-semibold" style={{color: '#00D37F'}}>Company</h3>
+              <h3 className="text-base font-semibold" style={{color: '#00D37F'}}>Company</h3>
               <div className="space-y-2">
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">About</a>
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Careers</a>
@@ -667,9 +699,9 @@ const HomePage = () => {
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Blog</a>
               </div>
             </div>
-           
+            
             <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <h3 className="text-lg font-semibold" style={{color: '#00D37F'}}>Support</h3>
+              <h3 className="text-base font-semibold" style={{color: '#00D37F'}}>Support</h3>
               <div className="space-y-2">
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Help Center</a>
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Documentation</a>
@@ -677,9 +709,9 @@ const HomePage = () => {
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Status</a>
               </div>
             </div>
-           
+            
             <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <h3 className="text-lg font-semibold" style={{color: '#00D37F'}}>Legal</h3>
+              <h3 className="text-base font-semibold" style={{color: '#00D37F'}}>Legal</h3>
               <div className="space-y-2">
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Privacy</a>
                 <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Terms</a>
@@ -688,7 +720,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-         
+          
           <div className="border-t border-gray-800 mt-12 pt-8 text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <p className="text-gray-400">
               © 2025 Prymsearch. All rights reserved. Powered by Search AI.
@@ -723,14 +755,14 @@ const HomePage = () => {
       >
         <div className="relative" style={{ paddingBottom: '56.25%', height: 0, width: '80vw', maxWidth: '900px' }}>
           <iframe
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            src={`https://www.youtube.com/embed/$${videoId}?autoplay=1`}
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
             title="Demo Video"
             className="absolute top-0 left-0 w-full h-full"
           ></iframe>
-           <button
+            <button
             onClick={closeModal}
             className="absolute -top-4 -right-4 bg-white rounded-full p-2"
             style={{ zIndex: 1001}}
