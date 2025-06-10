@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Search, User, Building, Users, Star, MapPin, Store, Mail, Phone, Globe, Instagram, Twitter, Linkedin, ExternalLink, ChevronRight, Zap, Target, TrendingUp, MessageCircle, Filter, ArrowLeft } from 'lucide-react';
+import { Search, User, Building, Users, Star, MapPin, Store, Mail, Copy, Eye, FileText, Shield, Phone, Share2, Globe, Instagram, Twitter, Linkedin, ExternalLink, ChevronRight, Heart, Zap, Target, TrendingUp, MessageCircle, Filter, ArrowLeft } from 'lucide-react';
+// import { 
+//   ArrowLeft, Star, MapPin, Users, Mail, Phone, Globe, Store, 
+//   Linkedin, Twitter, Instagram, Zap, ExternalLink, Shield,
+//   TrendingUp, Calendar, Award, MessageCircle, Heart, Share2,
+//   , CheckCircle, Eye, Camera, Video, 
+// } from 'lucide-react';
 import allProfiles from '../utils/demoProfiles.json';
 import { 
   Menu,
@@ -166,99 +172,376 @@ const ProdDemo = () => {
   };
   
   const ProfileCard = ({ profile, onClick }) => (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100 hover:border-[#00D37F] p-4 sm:p-6" onClick={() => onClick(profile)} >
-      <div className="flex items-start gap-4">
-        <div className="relative flex-shrink-0">
-          <img src={profile.avatar} alt={profile.name} className="w-16 h-16 rounded-full object-cover" />
-          {profile.verified && (<div className="absolute -top-1 -right-1 bg-[#00D37F] rounded-full p-1"><Star className="w-3 h-3 text-white" fill="white" /></div>)}
+    <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer border border-gray-50 hover:border-[#00D37F]/30 overflow-hidden" onClick={() => onClick(profile)}>
+      {/* Header Section with Cover-like Background */}
+      <div className="h-20 bg-gradient-to-r from-[#00D37F]/10 via-[#dde35f]/20 to-[#F84F94]/10 relative">
+        <div className="absolute -bottom-8 left-6">
+          <div className="relative">
+            <img 
+              src={profile.avatar} 
+              alt={profile.name} 
+              className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg" 
+            />
+            {/* {profile.verified && (
+              <div className="absolute -top-1 -right-1 bg-[#00D37F] rounded-full p-1">
+                <Star className="w-3 h-3 text-white" fill="white" />
+              </div>
+            )} */}
+          </div>
         </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="font-bold text-[#121B00] text-base sm:text-lg truncate">{profile.name}</h3>
-          <p className="text-gray-600 text-sm mb-1">{profile.title}</p>
-          <p className="text-gray-500 text-sm mb-2">{profile.company}</p>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 mb-3">
-            <div className="flex items-center gap-1"><MapPin className="w-4 h-4" /><span>{profile.location}</span></div>
-            <div className="flex items-center gap-1"><Star className="w-4 h-4 text-yellow-500" fill="currentColor" /><span>{profile.rating}</span></div>
-          </div>
-          <div className="flex flex-wrap gap-2 mb-3">
-            {profile.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-[#dde35f] text-[#121B00] rounded-full text-xs font-medium">{tag}</span>))}
-          </div>
-          <p className="text-gray-600 text-sm line-clamp-2 mb-4">{profile.summary}</p>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4 text-sm">
-              <div className="flex items-center gap-1"><Users className="w-4 h-4 text-[#F84F94]" /><span>{profile.followers}</span></div>
-              <div className="flex items-center gap-1"><TrendingUp className="w-4 h-4 text-[#00D37F]" /><span>{profile.engagement}</span></div>
+      </div>
+      
+      {/* Main Content */}
+      <div className="pt-10 pb-4 px-6">
+        {/* Name and Title */}
+        <div className="mb-3">
+          <div className="flex items-center justify-between mb-1">
+            <h3 className="font-bold text-[#121B00] text-lg">{profile.name}</h3>
+            <div className="flex items-center gap-1 text-yellow-500">
+              <Star className="w-4 h-4" fill="currentColor" />
+              <span className="text-sm text-gray-600">{profile.rating}</span>
             </div>
-            <ChevronRight className="w-5 h-5 text-gray-400" />
+          </div>
+          <p className="text-gray-600 text-sm font-medium">{profile.title}</p>
+          <p className="text-gray-500 text-sm">{profile.company}</p>
+        </div>
+  
+        {/* Location */}
+        <div className="flex items-center gap-1 text-gray-500 text-sm mb-3">
+          <MapPin className="w-4 h-4" />
+          <span>{profile.location}</span>
+        </div>
+  
+        {/* Bio/Summary */}
+        <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-3">
+          {profile.summary}
+        </p>
+  
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {profile.tags.slice(0, 4).map((tag, index) => (
+            <span 
+              key={index} 
+              className="px-3 py-1 bg-[#dde35f]/80 text-[#121B00] rounded-full text-xs font-medium hover:bg-[#dde35f] transition-colors"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+  
+        {/* Social Stats */}
+        <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-1">
+              <Users className="w-4 h-4 text-[#F84F94]" />
+              <span className="text-sm text-gray-600 font-medium">{profile.followers}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <TrendingUp className="w-4 h-4 text-[#00D37F]" />
+              <span className="text-sm text-gray-600 font-medium">{profile.engagement}</span>
+            </div>
+          </div>
+          
+          {/* Action Buttons */}
+          <div className="flex items-center gap-2">
+            <button className="p-2 hover:bg-gray-50 rounded-full transition-colors">
+              <Heart className="w-4 h-4 text-gray-400 hover:text-[#F84F94]" />
+            </button>
+            <button className="p-2 hover:bg-gray-50 rounded-full transition-colors">
+              <MessageCircle className="w-4 h-4 text-gray-400 hover:text-[#00D37F]" />
+            </button>
+            <button className="p-2 hover:bg-gray-50 rounded-full transition-colors">
+              <Share2 className="w-4 h-4 text-gray-400" />
+            </button>
+            <ChevronRight className="w-5 h-5 text-gray-300 ml-2" />
           </div>
         </div>
       </div>
     </div>
   );
-
+ 
+  
   const ProfileDetails = ({ profile, onBack }) => {
+    const [copiedField, setCopiedField] = useState(null);
+  
     const outreachSuggestion = generateOutreachSuggestion(profile);
+  
+    const copyToClipboard = (text, field) => {
+      navigator.clipboard.writeText(text);
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 2000);
+    };
+  
+    const socialPlatforms = [
+      { name: 'LinkedIn', icon: Linkedin, handle: profile.social?.linkedin, color: 'text-[#0A66C2]', bgColor: 'bg-[#0A66C2]/10' },
+      { name: 'Twitter', icon: Twitter, handle: profile.social?.twitter, color: 'text-[#1DA1F2]', bgColor: 'bg-[#1DA1F2]/10' },
+      { name: 'Instagram', icon: Instagram, handle: profile.social?.instagram, color: 'text-[#E4405F]', bgColor: 'bg-[#E4405F]/10' },
+    ].filter(platform => platform.handle);
+  
     return (
-      <div className="max-w-4xl mx-auto">
-        <button onClick={onBack} className="flex items-center gap-2 text-[#00D37F] hover:text-[#121B00] mb-6 transition-colors font-semibold"><ArrowLeft className="w-5 h-5" /> Back to Results</button>
-        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8">
-          <div className="flex flex-col md:flex-row gap-6 mb-8">
-            <div className="relative self-center md:self-start flex-shrink-0">
-              <img src={profile.avatar} alt={profile.name} className="w-32 h-32 rounded-full object-cover mx-auto md:mx-0" />
-              {profile.verified && (<div className="absolute -top-2 -right-2 bg-[#00D37F] rounded-full p-2"><Star className="w-4 h-4 text-white" fill="white" /></div>)}
-            </div>
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="text-2xl sm:text-3xl font-bold text-[#121B00] mb-2">{profile.name}</h1>
-              <p className="text-lg sm:text-xl text-gray-600 mb-2">{profile.title}</p>
-              <p className="text-base sm:text-lg text-gray-500 mb-4">{profile.company}</p>
-              <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-sm text-gray-500 mb-4">
-                <div className="flex items-center gap-1"><MapPin className="w-4 h-4" /><span>{profile.location}</span></div>
-                <div className="flex items-center gap-1"><Star className="w-4 h-4 text-yellow-500" fill="currentColor" /><span>{profile.rating}/5.0</span></div>
-                <div className="flex items-center gap-1"><Users className="w-4 h-4" /><span>{profile.followers} followers</span></div>
-              </div>
-              <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                {profile.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-[#dde35f] text-[#121B00] rounded-full text-sm font-medium">{tag}</span>))}
+      <div className="max-w-5xl mx-auto !text-sm">
+        {/* Navigation */}
+        <button 
+          onClick={onBack} 
+          className="flex items-center gap-2 text-[#00D37F] hover:text-[#121B00] mb-6 transition-colors font-medium group"
+        >
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> 
+          Back to Search Results
+        </button>
+  
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          {/* Hero Section with Cover */}
+          <div className="h-32 bg-gradient-to-r from-[#00D37F]/20 via-[#dde35f]/30 to-[#F84F94]/20 relative">
+            <div className="absolute top-4 right-6 flex items-center gap-2">
+              <div className="flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                <Eye className="w-4 h-4 text-gray-500" />
+                <span className="text-sm text-gray-600">Found across {socialPlatforms.length + 2} platforms</span>
               </div>
             </div>
           </div>
-          <div className="mb-8">
-            <h2 className="text-xl font-bold text-[#121B00] mb-3">About</h2>
-            <p className="text-gray-600 leading-relaxed">{profile.summary}</p>
+  
+          {/* Profile Header */}
+          <div className="px-8 pb-8">
+            <div className="flex flex-col md:flex-row gap-6 -mt-16 relative z-10">
+              <div className="flex-shrink-0 self-center md:self-start">
+                <div className="relative">
+                  <img 
+                    src={profile.avatar} 
+                    alt={profile.name} 
+                    className="w-32 h-32 rounded-2xl object-cover border-4 border-white shadow-xl" 
+                  />
+                  {profile.verified && (
+                    <div className="absolute -top-2 -right-2 bg-[#00D37F] rounded-full p-2 shadow-lg">
+                      <Shield className="w-4 h-4 text-white" />
+                    </div>
+                  )}
+                  {/* <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white rounded-full px-3 py-1 shadow-lg border">
+                    <span className="text-xs font-medium text-gray-600">Verified Profile</span>
+                  </div> */}
+                </div>
+              </div>
+  
+              <div className="flex-1 pt-4">
+                <div className="text-center md:text-left">
+                  <h1 className="text-xl font-bold text-[#121B00] mb-2">{profile.name}</h1>
+                  <p className="text-lg text-gray-600 mb-1">{profile.title}</p>
+                  <p className="text-base text-gray-500 mb-4">{profile.company}</p>
+                  
+                  {/* Quick Stats */}
+                  <div className="flex flex-wrap justify-center md:justify-start gap-6 mb-6">
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-gray-400" />
+                      <span className="text-gray-600">{profile.location}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Star className="w-4 h-4 text-yellow-500" fill="currentColor" />
+                      <span className="text-gray-600">{profile.rating}/5.0</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-[#F84F94]" />
+                      <span className="text-gray-600">{profile.followers} total followers</span>
+                    </div>
+                  </div>
+  
+                  {/* Tags */}
+                  <div className="flex flex-wrap justify-center md:justify-start gap-2">
+                    {profile.tags.slice(0, 5).map((tag, index) => (
+                      <span 
+                        key={index} 
+                        className="px-3 py-1 bg-[#dde35f]/80 text-[#121B00] rounded-full text-sm font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {Object.entries(profile.metrics).map(([key, value], index) => (<div key={index} className="bg-gray-50 rounded-lg p-4 text-center"><div className="text-xl sm:text-2xl font-bold text-[#00D37F] mb-1">{value}</div><div className="text-xs sm:text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div></div>))}
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+  
+          {/* Content Grid */}
+          <div className="px-8 pb-8 space-y-8">
+            {/* About Section */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h2 className="text-lg font-bold text-[#121B00] mb-4 flex items-center gap-2">
+                <FileText className="w-5 h-5" />
+                About {profile.name.split(' ')[0]}
+              </h2>
+              <p className="text-gray-700 leading-relaxed">{profile.summary}</p>
+            </div>
+  
+            {/* Social Media Presence */}
             <div>
-              <h3 className="text-lg font-bold text-[#121B00] mb-4">Contact Information</h3>
-              <div className="space-y-3">
-                {profile.contactInfo.email && (<div className="flex items-center gap-3"><Mail className="w-5 h-5 text-[#00D37F]" /><span className="text-gray-600 break-all">{profile.contactInfo.email}</span></div>)}
-                {profile.contactInfo.phone && (<div className="flex items-center gap-3"><Phone className="w-5 h-5 text-[#00D37F]" /><span className="text-gray-600">{profile.contactInfo.phone}</span></div>)}
-                {profile.contactInfo.website && (<div className="flex items-center gap-3"><Globe className="w-5 h-5 text-[#00D37F]" /><a href={'https://' + profile.contactInfo.website} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#00D37F] break-all">{profile.contactInfo.website}</a></div>)}
-                {/* IMPROVEMENT: Conditionally render the store link for businesses */}
-                {profile.contactInfo.store && (<div className="flex items-center gap-3"><Store className="w-5 h-5 text-[#00D37F]" /><a href={profile.contactInfo.store} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#00D37F] break-all">{profile.contactInfo.store}</a></div>)}
+              <h3 className="text-lg font-bold text-[#121B00] mb-6 flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                Social Media Presence
+              </h3>
+              <div className="grid md:grid-cols-3 gap-4">
+                {socialPlatforms.map((platform, index) => {
+                  const Icon = platform.icon;
+                  return (
+                    <div key={index} className={`${platform.bgColor} rounded-xl p-4 hover:shadow-md transition-all duration-200`}>
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2">
+                          <Icon className={`w-5 h-5 ${platform.color}`} />
+                          <span className="font-semibold text-gray-800">{platform.name}</span>
+                        </div>
+                        <ExternalLink className="w-4 h-4 text-gray-400" />
+                      </div>
+                      <p className="text-gray-700 font-medium">@{platform.handle}</p>
+                      <p className="text-xs text-gray-500 mt-1">Active profile found</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
+  
+            {/* Metrics Overview */}
             <div>
-              <h3 className="text-lg font-bold text-[#121B00] mb-4">Social Media</h3>
-              <div className="space-y-3">
-                {profile.social.linkedin && (<div className="flex items-center gap-3"><Linkedin className="w-5 h-5 text-[#0A66C2]" /><span className="text-gray-600 break-all">{profile.social.linkedin}</span></div>)}
-                {profile.social.twitter && (<div className="flex items-center gap-3"><Twitter className="w-5 h-5 text-[#1DA1F2]" /><span className="text-gray-600">@{profile.social.twitter}</span></div>)}
-                {profile.social.instagram && (<div className="flex items-center gap-3"><Instagram className="w-5 h-5 text-[#E4405F]" /><span className="text-gray-600">@{profile.social.instagram}</span></div>)}
+              <h3 className="text-lg font-bold text-[#121B00] mb-6 flex items-center gap-2">
+                <TrendingUp className="w-5 h-5" />
+                Engagement Metrics
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {Object.entries(profile.metrics || {}).map(([key, value], index) => (
+                  <div key={index} className="bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-[#00D37F]/30 transition-colors">
+                    <div className="text-2xl font-bold text-[#00D37F] mb-1">{value}</div>
+                    <div className="text-sm text-gray-600 capitalize">
+                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-          <div className="bg-gradient-to-r from-[#00D37F]/10 to-[#F84F94]/10 rounded-lg p-4 sm:p-6">
-            <div className="flex items-center gap-2 mb-4"><Zap className="w-5 h-5 text-[#00D37F]" /><h3 className="text-lg font-bold text-[#121B00]">AI Outreach Suggestions</h3></div>
-            <div className="space-y-4">
-              <div><h4 className="font-semibold text-[#121B00] mb-2">Recommended Subject:</h4><p className="text-gray-700 bg-white rounded px-3 py-2">{outreachSuggestion.subject}</p></div>
-              <div><h4 className="font-semibold text-[#121B00] mb-2">Approach Style:</h4><span className="inline-block bg-[#dde35f] text-[#121B00] px-3 py-1 rounded-full text-sm font-medium">{outreachSuggestion.approach}</span></div>
-              {/* IMPROVEMENT: Added best contact method display */}
-              <div><h4 className="font-semibold text-[#121B00] mb-2">Best Contact Method:</h4><p className="text-gray-700">{outreachSuggestion.bestContactMethod}</p></div>
-              <div><h4 className="font-semibold text-[#121B00] mb-2">Message Template:</h4><p className="text-gray-700 bg-white rounded px-3 py-2 leading-relaxed">{outreachSuggestion.message}</p></div>
-              <div>
-                <h4 className="font-semibold text-[#121B00] mb-2">Pro Tips:</h4>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">{outreachSuggestion.tips.map((tip, index) => (<li key={index}>{tip}</li>))}</ul>
+  
+            {/* Contact Information */}
+            <div>
+              <h3 className="text-lg font-bold text-[#121B00] mb-6 flex items-center gap-2">
+                <MessageCircle className="w-5 h-5" />
+                Contact Information
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  {profile.contactInfo?.email && (
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <Mail className="w-5 h-5 text-[#00D37F]" />
+                        <span className="text-gray-700">{profile.contactInfo.email}</span>
+                      </div>
+                      <button 
+                        onClick={() => copyToClipboard(profile.contactInfo.email, 'email')}
+                        className="p-1 hover:bg-gray-200 rounded"
+                      >
+                        {copiedField === 'email' ? 
+                          <CheckCircle className="w-4 h-4 text-green-500" /> : 
+                          <Copy className="w-4 h-4 text-gray-400" />
+                        }
+                      </button>
+                    </div>
+                  )}
+                  
+                  {profile.contactInfo?.phone && (
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <Phone className="w-5 h-5 text-[#00D37F]" />
+                        <span className="text-gray-700">{profile.contactInfo.phone}</span>
+                      </div>
+                      <button 
+                        onClick={() => copyToClipboard(profile.contactInfo.phone, 'phone')}
+                        className="p-1 hover:bg-gray-200 rounded"
+                      >
+                        {copiedField === 'phone' ? 
+                          <CheckCircle className="w-4 h-4 text-green-500" /> : 
+                          <Copy className="w-4 h-4 text-gray-400" />
+                        }
+                      </button>
+                    </div>
+                  )}
+                </div>
+                
+                <div className="space-y-4">
+                  {profile.contactInfo?.website && (
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <Globe className="w-5 h-5 text-[#00D37F]" />
+                        <a 
+                          href={`https://${profile.contactInfo.website}`} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-gray-700 hover:text-[#00D37F]"
+                        >
+                          {profile.contactInfo.website}
+                        </a>
+                      </div>
+                      <ExternalLink className="w-4 h-4 text-gray-400" />
+                    </div>
+                  )}
+                  
+                  {profile.contactInfo?.store && (
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <Store className="w-5 h-5 text-[#00D37F]" />
+                        <a 
+                          href={profile.contactInfo.store} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-gray-700 hover:text-[#00D37F]"
+                        >
+                          Online Store
+                        </a>
+                      </div>
+                      <ExternalLink className="w-4 h-4 text-gray-400" />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+  
+            {/* AI Outreach Suggestions */}
+            <div className="bg-gradient-to-r from-[#00D37F]/5 via-[#dde35f]/10 to-[#F84F94]/5 rounded-2xl p-6 border border-[#00D37F]/20">
+              <div className="flex items-center gap-2 mb-6">
+                <Zap className="w-6 h-6 text-[#00D37F]" />
+                <h3 className="text-lg font-bold text-[#121B00]">AI-Powered Outreach Insights</h3>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-[#121B00] mb-2 text-sm uppercase tracking-wide">Recommended Subject</h4>
+                    <p className="text-gray-700">{outreachSuggestion.subject}</p>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-[#121B00] mb-2 text-sm uppercase tracking-wide">Best Approach</h4>
+                    <span className="inline-block bg-[#dde35f] text-[#121B00] px-3 py-1 rounded-full text-sm font-medium">
+                      {outreachSuggestion.approach}
+                    </span>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-[#121B00] mb-2 text-sm uppercase tracking-wide">Preferred Contact</h4>
+                    <p className="text-gray-700">{outreachSuggestion.bestContactMethod}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-[#121B00] mb-3 text-sm uppercase tracking-wide">Message Template</h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">{outreachSuggestion.message}</p>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-4">
+                    <h4 className="font-semibold text-[#121B00] mb-3 text-sm uppercase tracking-wide">Pro Tips</h4>
+                    <ul className="space-y-2">
+                      {outreachSuggestion.tips.map((tip, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
+                          <div className="w-1.5 h-1.5 bg-[#00D37F] rounded-full mt-2 flex-shrink-0"></div>
+                          {tip}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -266,7 +549,7 @@ const ProdDemo = () => {
       </div>
     );
   };
-
+  
   if (selectedProfile) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
@@ -341,7 +624,7 @@ const ProdDemo = () => {
         {searchResults.length === 0 && !isSearching && (
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#121B00] mb-4">Find Anyone, Anywhere</h2>
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Use AI to discover the perfect people, businesses, and creators with just a simple description.</p>
+            <p className="text-lg sm:text-base text-gray-600 mb-8 max-w-3xl mx-auto">Use AI to discover the perfect people, businesses, and creators with just a simple description.</p>
           </div>
         )}
         <div className="max-w-4xl mx-auto mb-8">
@@ -355,7 +638,7 @@ const ProdDemo = () => {
         </div>
         {searchResults.length === 0 && !isSearching && (
           <div className="max-w-6xl mx-auto mb-12">
-            <h3 className="text-xl sm:text-2xl font-bold text-[#121B00] mb-6 text-center">Try These Examples</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-[#121B00] mb-6 text-center">Try These Examples</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {Object.entries(demoQueries).map(([category, queries]) => (
                 <div key={category} className="bg-white rounded-xl p-4 sm:p-6 shadow-lg border">
@@ -383,7 +666,7 @@ const ProdDemo = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-2">
               {/* <h3 className="text-xl sm:text-2xl font-bold text-[#121B00] truncate">Found {searchResults.length} matches</h3> */}
-              <h3 className="text-xl sm:text-2xl font-bold text-[#121B00] truncate">Found 100 matches</h3>
+              <h3 className="text-lg sm:text-2xl font-bold text-[#121B00] truncate">Found 100 matches</h3>
               <div className="flex items-center gap-2 flex-shrink-0"><Filter className="w-5 h-5 text-gray-400" /><span className="text-sm text-gray-600">Sort by relevance</span></div>
             </div>
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">{paginatedResults.map((profile) => (<ProfileCard key={profile.id} profile={profile} onClick={setSelectedProfile} />))}</div>
@@ -399,7 +682,7 @@ const ProdDemo = () => {
         {searchResults.length === 0 && !isSearching && searchQuery && (
           <div className="text-center py-12">
             <MessageCircle className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-[#121B00] mb-2">No matches found</h3>
+            <h3 className="text-lg font-semibold text-[#121B00] mb-2">No matches found</h3>
             <p className="text-gray-600 max-w-md mx-auto">Try a different or more general search query. For example, instead of "Fintech UX Designer in Ikeja", try "UX Designer Lagos".</p>
           </div>
         )}

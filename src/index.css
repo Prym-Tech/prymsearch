@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @import "tailwindcss";
 
 @theme {
@@ -35,7 +37,9 @@
 }
 
 html {
-  font-family: 'Charlie Display', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   scroll-behavior: smooth;
   overflow-x: hidden;
   /* font-weight: normal; */
