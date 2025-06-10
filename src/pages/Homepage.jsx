@@ -19,12 +19,16 @@ import {
   Brain,
   Database,
   MessageSquare,
-  ArrowUpRight
+  ArrowUpRight, 
+  TrendingUp, 
+  Mail 
 } from 'lucide-react';
 
 import Logo from '../assets/logos/logoL.png';
 import Ind from '../assets/logos/ind.png';
 import Shopper from '../assets/logos/shop.png';
+
+import Man from '../assets/images/man.png';
 
 
 // Set the app element for react-modal
@@ -566,12 +570,12 @@ const HomePage = () => {
             <h2 className="text-3xl lg:text-5xl font-semibold" style={{color: '#121B00'}}>
               Search the Right Way!
             </h2>
-            <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm lg:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our AI-powered Search AI technology delivers precise results where traditional platforms fail
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -589,6 +593,130 @@ const HomePage = () => {
                 </p>
               </div>
             ))}
+          </div> */}
+
+          <div className='flex justify-between flex-col lg:flex-row items-start'>
+            <div className='w-full lg:w-[58%] bg-white rounded-2xl p-6 pb-0 mb-12 lg:mb-0'>
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                AI-Native Search
+                </h2>
+                <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+                Natural language queries that understand exactly who you're looking for, powered by advanced AI models.
+                </p>
+              </div>
+
+              <div className="relative mb-7">
+                <input
+                  type="text"
+                  placeholder="Find good food vendors online"
+                  className="w-full pl-4 pr-20 py-6 border-1 border-gray-400 rounded-full text-gray-900 placeholder-gray-600 focus:outline-none shadow-sm text-xs lg:text-sm"
+                  readOnly
+                />
+                <button 
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
+                  style={{ backgroundColor: '#161D25', color: '#B0D226' }}
+                >
+                  <Search className="w-4 h-4 lg:w-5 lg:h-5" />
+                  Search
+                </button>
+              </div>
+
+              <div 
+                  className="overflow-hidden rounded-[32px] rounded-bl-[0] rounded-br-[0] h-[200px] p-6 space-y-4"
+                  style={{ backgroundColor: '#161D25' }}
+                >
+                  {examples.map((example, index) => {
+                    const IconComponent = example.icon;
+                    return (
+                      <div
+                        key={index}
+                        className={`flex items-start gap-3 p-3 rounded-2xl bg-white/10 cursor-pointer transition-all duration-300 ${
+                          index === currentExampleIndex 
+                            ? 'bg-white/10  border-1 border-white transform scale-105' 
+                            : 'hover:bg-white/5 hover:border-1 hover:border-white'
+                        }`}
+                      >
+                        <div 
+                          className="w-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                        >
+                          <img src={IconComponent} className="w-[15px]" />
+                        </div>
+                        <p className="text-white text-xs lg:text-sm leading-relaxed">
+                          {example.text}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="max-w-sm mx-auto bg-white rounded-2xl p-6 pb-0 shadow-lg w-full lg:w-[48%]">
+                {/* Header */}
+                <div className="mb-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                    Deep Profile Insights
+                  </h2>
+                  <p className="text-sm lg:text-base  text-gray-600 leading-relaxed">
+                    Get comprehensive profiles with bios, contact info, and AI-generated outreach suggestions.
+                  </p>
+                </div>
+
+                {/* Profile Section */}
+                <div className="relative mb-4">
+                  {/* Background elements - placeholder bars */}
+                  <div className="absolute left-0 top-8 space-y-2">
+                    <div className="w-16 h-2 bg-gray-200 rounded"></div>
+                    <div className="w-12 h-2 bg-gray-200 rounded"></div>
+                    <div className="w-20 h-2 bg-gray-200 rounded"></div>
+                  </div>
+
+                  {/* Background avatar placeholder */}
+                  <div className="absolute left-2 bottom-7 w-16 h-16 bg-gray-200 rounded-full"></div>
+
+                  {/* Background content lines */}
+                  <div className="absolute right-0 top-8 space-y-2">
+                    <div className="w-24 h-2 bg-gray-200 rounded"></div>
+                    <div className="w-20 h-2 bg-gray-200 rounded"></div>
+                    <div className="w-28 h-2 bg-gray-200 rounded"></div>
+                    <div className="w-16 h-2 bg-gray-200 rounded"></div>
+                  </div>
+
+                  {/* Mail icon */}
+                  <div className="absolute right-0 bottom-12 w-8 h-8 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-gray-400" />
+                  </div>
+
+                  {/* Main profile image */}
+                  <div className="flex justify-center pt-4 pb-8">
+                    <div className="relative">
+                      <div className="w-35 h-35 rounded-full overflow-hidden border-4 border-white">
+                        <img 
+                          src={Man}
+                          alt="Profile"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      {/* Green background circle */}
+                      
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stats Section */}
+                <div className="rounded-2xl rounded-bl-[0] rounded-br-[0] p-6 pb-3 text-white" style={{ backgroundColor: '#161D25' }}>
+                  <div className="flex items-center justify-around">
+                    <div className="flex items-center gap-3">
+                      <BarChart3 className="w-5 h-5 text-orange-400" />
+                      <span className="text-2xl font-semibold">250k</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <TrendingUp className="w-5 h-5 text-pink-400" />
+                      <span className="text-2xl font-semibold">19.5k</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </section>
@@ -633,7 +761,7 @@ const HomePage = () => {
       {/* Waitlist Section */}
       <section id="waitlist" className="py-24 px-4 sm:px-6 lg:px-8" style={{backgroundColor: '#121B00'}}>
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-xl lg:text-2xl font-bold text-white animate-fade-in-up">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white animate-fade-in-up">
             Ready to Find Anyone?
           </h2>
           <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
