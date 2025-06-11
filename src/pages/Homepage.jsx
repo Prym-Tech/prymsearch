@@ -298,11 +298,11 @@ const HomePage = () => {
         .gradient-text {
           background: linear-gradient(
             90deg,
-            #121B00 0%,
+            #B0D226 0%,
             #00D37F 25%,
-            #121B00 50%,
+            #B0D226 50%,
             #00D37F 75%,
-            #121B00 100%
+            #B0D226 100%
           );
           background-size: 300% 100%;
           -webkit-background-clip: text;
@@ -314,11 +314,11 @@ const HomePage = () => {
         .gradient-text-shimmer {
           background: linear-gradient(
             90deg,
-            #121B00,
-            #121B00,
+            #B0D226,
+            #B0D226,
             #00D37F,
-            #121B00,
-            #121B00
+            #B0D226,
+            #B0D226
           );
           background-size: 200% 100%;
           -webkit-background-clip: text;
@@ -733,7 +733,7 @@ const HomePage = () => {
                 <h3 className="text-base font-semibold" style={{color: '#121B00'}}>
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed lg:max-w-sm">
+                <p className="text-gray-600 leading-relaxed text-sm lg:text-base lg:max-w-sm">
                   {step.description}
                 </p>
               </div>
@@ -743,98 +743,44 @@ const HomePage = () => {
       </section>
 
       {/* Waitlist Section */}
-      <section id="waitlist" className="py-24 px-4 sm:px-6 lg:px-8" style={{backgroundColor: '#121B00'}}>
+      <section id="waitlist" className="py-24 px-4 sm:px-6 lg:px-8" style={{backgroundColor: '#161D25'}}>
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white animate-fade-in-up">
+          <h2 className="text-4xl lg:text-6xl font-semibold text-lgreen animate-fade-in-up">
             Ready to Find Anyone?
           </h2>
-          <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <p className="text-sm lg:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             Join thousands of professionals, businesses, and creators who are discovering the power of AI-driven people search.
           </p>
           
-          <div className="max-w-md mx-auto animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-            <div className="space-y-4">
+          <div className="max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            <div className="relative max-w-2xl w-full">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="w-full px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 transition-all duration-300 hover:shadow-lg"
-                style={{'--focus-ring-color': '#00D37F'}}
-                onFocus={(e) => {
-                  e.target.style.ringColor = '#00D37F';
-                }}
-              />
-              <button
-                onClick={handleSubmit}
-                className="w-full px-8 py-4 rounded-lg font-medium text-base hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple"
-                style={{backgroundColor: '#00D37F', color: '#121B00'}}
+                placeholder="Enter your Email address"
                 disabled={isSubmitted}
+                className="w-full pl-4 pr-20 py-6 border-2 border-white rounded-full text-gray-900 placeholder-white/50 focus:outline-none shadow-sm text-xs lg:text-sm"
+              />
+              <button 
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
+                style={{ backgroundColor: 'white', color: '#161D25' }}
               >
-                {isSubmitted ? (
-                  <>
-                    <CheckCircle className="w-5 h-5 animate-pulse-custom" />
-                    <span>Added to Waitlist!</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Join Waitlist - It's Free</span>
-                    <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </>
-                )}
+                <span>Join Waitlist - It's Free</span>
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
               </button>
             </div>
           </div>
+
+          
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="text-white py-16 px-4 sm:px-6 lg:px-8" style={{backgroundColor: '#121B00'}}>
+      <footer className="text-white py-6 px-4 sm:px-6 lg:px-8" style={{backgroundColor: '#161D25'}}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            <div className="space-y-4 animate-fade-in-up">
-              <h3 className="text-base font-semibold" style={{color: '#00D37F'}}>Product</h3>
-              <div className="space-y-2">
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Features</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Pricing</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">API</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Enterprise</a>
-              </div>
-            </div>
-            
-            <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              <h3 className="text-base font-semibold" style={{color: '#00D37F'}}>Company</h3>
-              <div className="space-y-2">
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">About</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Careers</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Contact</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Blog</a>
-              </div>
-            </div>
-            
-            <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <h3 className="text-base font-semibold" style={{color: '#00D37F'}}>Support</h3>
-              <div className="space-y-2">
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Help Center</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Documentation</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Community</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Status</a>
-              </div>
-            </div>
-            
-            <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <h3 className="text-base font-semibold" style={{color: '#00D37F'}}>Legal</h3>
-              <div className="space-y-2">
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Privacy</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Terms</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Security</a>
-                <a href="#" className="block text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2">Cookies</a>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-            <p className="text-gray-400">
+          <div className="border-t border-gray-800 mt-6 pt-4 text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            <p className="text-gray-400 text-xs mr-auto">
               © 2025 Prymsearch. All rights reserved. Powered by Search AI.
             </p>
           </div>
