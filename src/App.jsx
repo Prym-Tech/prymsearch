@@ -4,6 +4,10 @@ import HomePage from './pages/Homepage.jsx';
 import ProductDemo from './pages/ProductDemo.jsx';
 import ProdDemo from './pages/ProdDemo.jsx';
 import './index.css';
+import Modal from 'react-modal';
+
+// Set the app element for accessibility
+Modal.setAppElement('#root');
 
 function App() {
   return (

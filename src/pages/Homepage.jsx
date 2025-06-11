@@ -24,6 +24,8 @@ import {
   Mail 
 } from 'lucide-react';
 
+import WaitlistModal from '../components/WaitlistModal.jsx'; 
+
 import Logo from '../assets/logos/logoL.png';
 import Ind from '../assets/logos/ind.png';
 import Shopper from '../assets/logos/shop.png';
@@ -45,13 +47,14 @@ Modal.setAppElement('#root'); // Or your app's root element
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [currentExampleIndex, setCurrentExampleIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => setIsDemoModalOpen(true);
+  const closeModal = () => setIsDemoModalOpen(false);
 
 
   useEffect(() => {
@@ -60,13 +63,13 @@ const HomePage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSubmit = () => {
-    if (email) {
-      setIsSubmitted(true);
-      setTimeout(() => setIsSubmitted(false), 3000);
-      setEmail('');
-    }
-  };
+  // const handleSubmit = () => {
+  //   if (email) {
+  //     setIsSubmitted(true);
+  //     setTimeout(() => setIsSubmitted(false), 3000);
+  //     setEmail('');
+  //   }
+  // };
 
 
   const steps = [
@@ -139,6 +142,76 @@ const HomePage = () => {
 
   // NOTE: Replace 'VIDEO_ID' with the actual ID of your YouTube video.
   const videoId = "dRPMJa2_vIM";
+
+  const handleJoinWaitlist = () => {
+    setIsModalOpen(true);
+  };
+
+  const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
+  const AIRTABLE_TOKEN = import.meta.env.VITE_AIRTABLE_TOKEN;
+
+  const [isExistingUser, setIsExistingUser] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [position, setPosition] = useState(null);
+
+  const handleModalSubmit = async ({ name, email }) => {
+    try {
+      // Check if email already exists
+      const searchResponse = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Signups?filterByFormula=Email%3D%22${encodeURIComponent(email)}%22`, {
+        headers: {
+          'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
+        }
+      });
+      
+      const searchData = await searchResponse.json();
+      
+      if (searchData.records.length > 0) {
+        // Email already exists
+        const existingRecord = searchData.records[0];
+        const existingPosition = existingRecord.fields.Position;
+        
+        return {
+          success: true,
+          position: existingPosition,
+          isExisting: true
+        };
+      }
+      
+      // Create new record
+      const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Signups`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fields: {
+            Email: email,
+            Name: name,
+          }
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const newPosition = data.fields.Position;
+        
+        return {
+          success: true,
+          position: newPosition,
+          isExisting: false
+        };
+      } else {
+        throw new Error('Failed to submit to waitlist');
+      }
+    } catch (error) {
+      console.error('Error submitting to waitlist:', error);
+      return {
+        success: false,
+        error: error.message
+      };
+    }
+  };
 
 
   return (
@@ -701,6 +774,8 @@ const HomePage = () => {
             <button 
               className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
               style={{ backgroundColor: '#161D25', color: '#B0D226' }}
+              onClick={handleJoinWaitlist}
+              disabled={isLoading || isSubmitted || !email}
             >
               Join Waitlist
               <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
@@ -760,16 +835,43 @@ const HomePage = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your Email address"
                 disabled={isSubmitted}
-                className="w-full pl-4 pr-20 py-6 border-2 border-white rounded-full text-gray-900 placeholder-white/50 focus:outline-none shadow-sm text-xs lg:text-sm"
+                className="w-full pl-4 pr-20 py-6 border-2 border-white rounded-full text-white placeholder-white/50 focus:outline-none shadow-sm text-xs lg:text-sm"
               />
-              <button 
+              
+              {/* <button 
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
                 style={{ backgroundColor: 'white', color: '#161D25' }}
               >
                 <span>Join Waitlist - It's Free</span>
                 <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
+              </button> */}
+              <button 
+                onClick={handleJoinWaitlist}
+                disabled={isLoading || isSubmitted || !email}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full cursor-pointer text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
+                style={{ backgroundColor: 'white', color: '#161D25' }}
+              >
+                <span>
+                  {isLoading ? 'Joining...' : 'Join Waitlist - It\'s Free'}
+                </span>
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
               </button>
             </div>
+
+            {/* {isSubmitted && position && (
+            <div className="mt-4 p-4 bg-green-500/20 border-2 border-green-500 rounded-lg text-center">
+              <p className="text-white font-medium">
+                🎉 You're number {position} on the waitlist!
+              </p>
+            </div>
+              )} */}
+
+              <WaitlistModal 
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                initialEmail={email}
+                onSubmit={handleModalSubmit}
+              />
           </div>
 
           
@@ -789,7 +891,7 @@ const HomePage = () => {
 
       {/* Video Modal */}
       <Modal
-        isOpen={isModalOpen}
+        isOpen={isDemoModalOpen}
         onRequestClose={closeModal}
         style={{
           overlay: {
