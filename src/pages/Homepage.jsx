@@ -299,9 +299,9 @@ const HomePage = () => {
           background: linear-gradient(
             90deg,
             #B0D226 0%,
-            #00D37F 25%,
+            #161D25 25%,
             #B0D226 50%,
-            #00D37F 75%,
+            #161D25 75%,
             #B0D226 100%
           );
           background-size: 300% 100%;
@@ -316,7 +316,7 @@ const HomePage = () => {
             90deg,
             #B0D226,
             #B0D226,
-            #00D37F,
+            #161D25,
             #B0D226,
             #B0D226
           );
