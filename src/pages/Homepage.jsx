@@ -51,7 +51,7 @@ const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModal(false);
+  const closeModal = () => setIsModalOpen(false);
 
 
   useEffect(() => {
