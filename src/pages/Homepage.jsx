@@ -29,6 +29,14 @@ import Ind from '../assets/logos/ind.png';
 import Shopper from '../assets/logos/shop.png';
 
 import Man from '../assets/images/man.png';
+import CSearch from '../assets/images/search2.png';
+import CSearchh from '../assets/images/searchh2.png';
+import Deep from '../assets/images/deep.png';
+
+import Desc from '../assets/images/desc.svg';
+import AIP from '../assets/images/aip.svg';
+import GCP from '../assets/images/gcp.svg';
+import CE from '../assets/images/ce.svg';
 
 
 // Set the app element for react-modal
@@ -60,57 +68,25 @@ const HomePage = () => {
     }
   };
 
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Native Search",
-      description: "Natural language queries that understand exactly who you're looking for, powered by advanced AI models."
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Deep Profile Insights",
-      description: "Get comprehensive profiles with bios, contact info, and AI-generated outreach suggestions."
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-Time Data",
-      description: "Fresh, verified information pulled from across the web in real-time, not outdated databases."
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Universal Application",
-      description: "Find anyone - from B2B prospects to influencers, freelancers to industry experts."
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Actionable Results",
-      description: "Structured data ready for immediate use, with personalized outreach strategies included."
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Verified Accuracy",
-      description: "AI verification ensures authentic profiles and accurate contact information."
-    }
-  ];
 
   const steps = [
     {
-      icon: <MessageSquare className="w-8 h-8" />,
+      icon: Desc,
       title: "Describe Who You Need",
       description: "Tell us in plain English who you're looking for - no complex filters needed"
     },
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: AIP,
       title: "AI Processes Your Query",
       description: "Our Search AI understands your intent and searches across the web in real-time"
     },
     {
-      icon: <Database className="w-8 h-8" />,
+      icon: GCP,
       title: "Get Curated Profiles",
       description: "Receive detailed, AI-verified profiles with bios, insights, and contact information"
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: CE,
       title: "Connect & Engage",
       description: "Use our AI-generated outreach suggestions to make meaningful connections"
     }
@@ -564,7 +540,7 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section id="features" className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-20 animate-on-scroll">
             <h2 className="text-3xl lg:text-5xl font-semibold" style={{color: '#121B00'}}>
@@ -595,8 +571,8 @@ const HomePage = () => {
             ))}
           </div> */}
 
-          <div className='flex justify-between flex-col lg:flex-row items-start'>
-            <div className='w-full lg:w-[58%] bg-white rounded-2xl p-6 pb-0 mb-12 lg:mb-0'>
+          <div className='flex justify-between flex-col lg:flex-row items-start lg:mb-12'>
+            <div className='w-full lg:w-[60%] bg-white rounded-2xl p-6 pb-0 mb-12 lg:mb-0'>
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
                 AI-Native Search
@@ -623,37 +599,37 @@ const HomePage = () => {
               </div>
 
               <div 
-                  className="overflow-hidden rounded-[32px] rounded-bl-[0] rounded-br-[0] h-[200px] p-6 space-y-4"
-                  style={{ backgroundColor: '#161D25' }}
-                >
-                  {examples.map((example, index) => {
-                    const IconComponent = example.icon;
-                    return (
-                      <div
-                        key={index}
-                        className={`flex items-start gap-3 p-3 rounded-2xl bg-white/10 cursor-pointer transition-all duration-300 ${
-                          index === currentExampleIndex 
-                            ? 'bg-white/10  border-1 border-white transform scale-105' 
-                            : 'hover:bg-white/5 hover:border-1 hover:border-white'
-                        }`}
+                className="overflow-hidden rounded-[32px] rounded-bl-[0] rounded-br-[0] h-[200px] p-6 space-y-4"
+                style={{ backgroundColor: '#161D25' }}
+              >
+                {examples.map((example, index) => {
+                  const IconComponent = example.icon;
+                  return (
+                    <div
+                      key={index}
+                      className={`flex items-start gap-3 p-3 rounded-2xl bg-white/10 cursor-pointer transition-all duration-300 ${
+                        index === currentExampleIndex 
+                          ? 'bg-white/10  border-1 border-white transform scale-105' 
+                          : 'hover:bg-white/5 hover:border-1 hover:border-white'
+                      }`}
+                    >
+                      <div 
+                        className="w-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
                       >
-                        <div 
-                          className="w-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
-                        >
-                          <img src={IconComponent} className="w-[15px]" />
-                        </div>
-                        <p className="text-white text-xs lg:text-sm leading-relaxed">
-                          {example.text}
-                        </p>
+                        <img src={IconComponent} className="w-[15px]" />
                       </div>
-                    );
-                  })}
-                </div>
+                      <p className="text-white text-xs lg:text-sm leading-relaxed">
+                        {example.text}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
+            </div>
 
-              <div className="max-w-sm mx-auto bg-white rounded-2xl p-6 pb-0 shadow-lg w-full lg:w-[48%]">
+            <div className=" bg-white rounded-2xl p-6 pb-0 shadow-lg w-full lg:w-[35%] mb-12 lg:mb-0">
                 {/* Header */}
-                <div className="mb-8">
+                <div className="mb-16">
                   <h2 className="text-2xl font-bold text-gray-900 mb-3">
                     Deep Profile Insights
                   </h2>
@@ -662,94 +638,102 @@ const HomePage = () => {
                   </p>
                 </div>
 
-                {/* Profile Section */}
-                <div className="relative mb-4">
-                  {/* Background elements - placeholder bars */}
-                  <div className="absolute left-0 top-8 space-y-2">
-                    <div className="w-16 h-2 bg-gray-200 rounded"></div>
-                    <div className="w-12 h-2 bg-gray-200 rounded"></div>
-                    <div className="w-20 h-2 bg-gray-200 rounded"></div>
-                  </div>
-
-                  {/* Background avatar placeholder */}
-                  <div className="absolute left-2 bottom-7 w-16 h-16 bg-gray-200 rounded-full"></div>
-
-                  {/* Background content lines */}
-                  <div className="absolute right-0 top-8 space-y-2">
-                    <div className="w-24 h-2 bg-gray-200 rounded"></div>
-                    <div className="w-20 h-2 bg-gray-200 rounded"></div>
-                    <div className="w-28 h-2 bg-gray-200 rounded"></div>
-                    <div className="w-16 h-2 bg-gray-200 rounded"></div>
-                  </div>
-
-                  {/* Mail icon */}
-                  <div className="absolute right-0 bottom-12 w-8 h-8 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-gray-400" />
-                  </div>
-
-                  {/* Main profile image */}
-                  <div className="flex justify-center pt-4 pb-8">
-                    <div className="relative">
-                      <div className="w-35 h-35 rounded-full overflow-hidden border-4 border-white">
-                        <img 
-                          src={Man}
-                          alt="Profile"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      {/* Green background circle */}
-                      
-                    </div>
-                  </div>
-                </div>
-
-                {/* Stats Section */}
-                <div className="rounded-2xl rounded-bl-[0] rounded-br-[0] p-6 pb-3 text-white" style={{ backgroundColor: '#161D25' }}>
-                  <div className="flex items-center justify-around">
-                    <div className="flex items-center gap-3">
-                      <BarChart3 className="w-5 h-5 text-orange-400" />
-                      <span className="text-2xl font-semibold">250k</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <TrendingUp className="w-5 h-5 text-pink-400" />
-                      <span className="text-2xl font-semibold">19.5k</span>
-                    </div>
-                  </div>
+                <div className=''>
+                  <img src={Deep} className='w-full max-w-xl' />
                 </div>
               </div>
+          </div>
+
+          <div className='flex justify-between flex-col lg:flex-row items-start'>
+            <div className='w-full lg:w-[48%] bg-white rounded-2xl p-6 pb-0 mb-12 lg:mb-0'>
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  Universal Real-Time Data
+                </h2>
+                <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+                  Fresh verified information of anyone pulled from across the web in real-time, not outdated databases.
+                </p>
+              </div>
+
+              <div className=''>
+                <img src={CSearch} className='w-full max-w-xl' />
+              </div>
+            </div>
+          
+
+            <div className='w-full lg:w-[48%] bg-white rounded-2xl p-6 pb-0 mb-12 lg:mb-0'>
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  Verified Actionable Results
+                </h2>
+                <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+                  Structured accurate data ready for immediate use, with personalized outreach strtegies included.
+                </p>
+              </div>
+
+              <div className=''>
+                <img src={CSearchh} className='w-full max-w-xl' />
+              </div>
+            </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto flex flex-col items-center justify-center">
+          <div className="text-center space-y-6 mb-20 animate-on-scroll">
+            <h2 className="text-3xl lg:text-5xl font-semibold" style={{color: '#121B00'}}>
+              Pricing Plans
+            </h2>
+            <p className="text-sm lg:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Get a trial run of our product and learn more about what we are building.
+            </p>
+          </div>
+
+          <div className="relative max-w-2xl w-full">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your Email address"
+              className="w-full pl-4 pr-20 py-6 border-1 border-gray-400 rounded-full text-gray-900 placeholder-gray-600 focus:outline-none shadow-sm text-xs lg:text-sm"
+            />
+            <button 
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
+              style={{ backgroundColor: '#161D25', color: '#B0D226' }}
+            >
+              Join Waitlist
+              <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
+            </button>
           </div>
         </div>
       </section>
 
       {/* How it Works */}
-      <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-6 mb-20 animate-on-scroll">
-            <h2 className="text-3xl lg:text-4xl font-bold" style={{color: '#121B00'}}>
+          <div className="text-center space-y-6 mb-14 lg:mb-20 animate-on-scroll">
+            <h2 className="text-3xl lg:text-5xl font-semibold" style={{color: '#121B00'}}>
               How Prymsearch Works
             </h2>
-            <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm lg:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Four simple steps to find exactly who you need
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"> */}
+          <div className="flex flex-col lg:flex-row lg:flex-wrap items-center justify-between max-w-3xl lg:mx-auto">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="text-center space-y-6 animate-on-scroll hover:scale-105 transition-transform duration-300"
+                className={`flex flex-col items-center text-center space-y-6 animate-on-scroll hover:scale-105 transition-transform duration-300 lg:w-[45%] mb-10 lg:mb-0 ${index > 1 ? 'lg:mt-14' : ''}`}
                 style={{animationDelay: `${index * 0.2}s`}}
               >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto animate-pulse-custom" style={{backgroundColor: '#F84F94', color: 'white'}}>
-                  {step.icon}
-                </div>
-                <div className="w-8 h-8 text-white rounded-full flex items-center justify-center mx-auto font-bold text-base transition-transform duration-300 hover:scale-110" style={{backgroundColor: '#121B00'}}>
-                  {index + 1}
-                </div>
+                <img src={step.icon} className='w-16 h-16' />
                 <h3 className="text-base font-semibold" style={{color: '#121B00'}}>
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed lg:max-w-sm">
                   {step.description}
                 </p>
               </div>
