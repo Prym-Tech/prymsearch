@@ -141,7 +141,7 @@ const HomePage = () => {
   }, []);
 
   // NOTE: Replace 'VIDEO_ID' with the actual ID of your YouTube video.
-  const videoId = "dRPMJa2_vIM";
+  const videoId = "iRl8VMOvVBs";
 
   const handleJoinWaitlist = () => {
     setIsModalOpen(true);
@@ -487,7 +487,7 @@ const HomePage = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-4 animate-slide-in-right">
-              <button className="text-lgreen px-8 py-4 rounded-full font-medium text-sm hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
+              <button onClick={handleJoinWaitlist} className="text-lgreen px-8 py-4 rounded-full font-medium text-sm hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
                   <span>Join Waitlist</span>
                 </button>
             </div>
@@ -505,18 +505,18 @@ const HomePage = () => {
           {isMenuOpen && (
             <div className="md:hidden bg-white border-t border-gray-100 py-6 animate-fade-in-up">
               <div className="space-y-4">
-                <a href="#features" className="block px-4 py-2 text-gray-700 hover:text-gray-900 transition-all duration-300 hover:translate-x-2">
+                <a href="#features" onClick={() => setIsMenuOpen(!isMenuOpen)} className="block px-4 py-2 text-gray-700 hover:text-gray-900 transition-all duration-300 hover:translate-x-2">
                   Features
                 </a>
-                <a href="#how-it-works" className="block px-4 py-2 text-gray-700 hover:text-gray-900 transition-all duration-300 hover:translate-x-2">
+                <a href="#how-it-works" onClick={() => setIsMenuOpen(!isMenuOpen)} className="block px-4 py-2 text-gray-700 hover:text-gray-900 transition-all duration-300 hover:translate-x-2">
                   How it Works
                 </a>
-                <a href="#pricing" className="block px-4 py-2 text-gray-700 hover:text-gray-900 transition-all duration-300 hover:translate-x-2">
+                <a href="#pricing" onClick={() => setIsMenuOpen(!isMenuOpen)} className="block px-4 py-2 text-gray-700 hover:text-gray-900 transition-all duration-300 hover:translate-x-2">
                   Pricing
                 </a>
                 <div className="px-4 pt-4">
                   
-                  <button className="w-full text-lgreen px-8 py-4 rounded-full font-medium text-base hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
+                  <button onClick={handleJoinWaitlist} className="w-full text-lgreen px-8 py-4 rounded-full font-medium text-base hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
                     <span>Join Waitlist</span>
                   </button>
                 </div>
@@ -545,7 +545,7 @@ const HomePage = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-                <button className="text-lgreen px-8 py-4 rounded-full font-medium text-base hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
+                <button onClick={handleJoinWaitlist} className="text-lgreen px-8 py-4 rounded-full font-medium text-base hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
                   <span>Join Waitlist</span>
                 </button>
                 <button
@@ -672,7 +672,7 @@ const HomePage = () => {
               </div>
 
               <div 
-                className="overflow-hidden rounded-[32px] rounded-bl-[0] rounded-br-[0] h-[200px] p-6 space-y-4"
+                className="overflow-hidden rounded-[32px] rounded-bl-[0] rounded-br-[0] h-[200px] p-4 lg:p-6 space-y-4"
                 style={{ backgroundColor: '#161D25' }}
               >
                 {examples.map((example, index) => {
@@ -689,7 +689,7 @@ const HomePage = () => {
                       <div 
                         className="w-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
                       >
-                        <img src={IconComponent} className="w-[15px]" />
+                        <img src={IconComponent} className="w-4" />
                       </div>
                       <p className="text-white text-xs lg:text-sm leading-relaxed">
                         {example.text}
@@ -752,7 +752,7 @@ const HomePage = () => {
           </div>
       </section>
 
-      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto flex flex-col items-center justify-center">
           <div className="text-center space-y-6 mb-20 animate-on-scroll">
             <h2 className="text-3xl lg:text-5xl font-semibold" style={{color: '#121B00'}}>
@@ -851,7 +851,10 @@ const HomePage = () => {
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full cursor-pointer text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
                 style={{ backgroundColor: 'white', color: '#161D25' }}
               >
-                <span>
+                <span className='block lg:hidden'>
+                  {isLoading ? 'Joining...' : 'Join Waitlist'}
+                </span>
+                <span className='hidden lg:block'>
                   {isLoading ? 'Joining...' : 'Join Waitlist - It\'s Free'}
                 </span>
                 <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
@@ -915,7 +918,7 @@ const HomePage = () => {
       >
         <div className="relative" style={{ paddingBottom: '56.25%', height: 0, width: '80vw', maxWidth: '900px' }}>
           <iframe
-            src={`https://www.youtube.com/embed/$${videoId}?autoplay=1`}
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen

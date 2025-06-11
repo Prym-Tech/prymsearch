@@ -11,6 +11,7 @@ import {
   Menu,
   X,
 } from 'lucide-react';
+import Logo from '../assets/logos/logoL.png';
 
 const ProdDemo = () => {
   const PAGE_SIZE = 20;
@@ -172,9 +173,9 @@ const ProdDemo = () => {
   };
   
   const ProfileCard = ({ profile, onClick }) => (
-    <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer border border-gray-50 hover:border-[#00D37F]/30 overflow-hidden" onClick={() => onClick(profile)}>
+    <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer border border-gray-50 hover:border-[#B0D226]/30 overflow-hidden" onClick={() => onClick(profile)}>
       {/* Header Section with Cover-like Background */}
-      <div className="h-20 bg-gradient-to-r from-[#00D37F]/10 via-[#dde35f]/20 to-[#F84F94]/10 relative">
+      <div className="h-20 bg-gradient-to-r from-[#B0D226]/10 via-[#dde35f]/20 to-[#F84F94]/10 relative">
         <div className="absolute -bottom-8 left-6">
           <div className="relative">
             <img 
@@ -183,7 +184,7 @@ const ProdDemo = () => {
               className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg" 
             />
             {/* {profile.verified && (
-              <div className="absolute -top-1 -right-1 bg-[#00D37F] rounded-full p-1">
+              <div className="absolute -top-1 -right-1 bg-[#B0D226] rounded-full p-1">
                 <Star className="w-3 h-3 text-white" fill="white" />
               </div>
             )} */}
@@ -237,7 +238,7 @@ const ProdDemo = () => {
               <span className="text-sm text-gray-600 font-medium">{profile.followers}</span>
             </div>
             <div className="flex items-center gap-1">
-              <TrendingUp className="w-4 h-4 text-[#00D37F]" />
+              <TrendingUp className="w-4 h-4 text-[#B0D226]" />
               <span className="text-sm text-gray-600 font-medium">{profile.engagement}</span>
             </div>
           </div>
@@ -248,7 +249,7 @@ const ProdDemo = () => {
               <Heart className="w-4 h-4 text-gray-400 hover:text-[#F84F94]" />
             </button>
             <button className="p-2 hover:bg-gray-50 rounded-full transition-colors">
-              <MessageCircle className="w-4 h-4 text-gray-400 hover:text-[#00D37F]" />
+              <MessageCircle className="w-4 h-4 text-gray-400 hover:text-[#B0D226]" />
             </button>
             <button className="p-2 hover:bg-gray-50 rounded-full transition-colors">
               <Share2 className="w-4 h-4 text-gray-400" />
@@ -283,7 +284,7 @@ const ProdDemo = () => {
         {/* Navigation */}
         <button 
           onClick={onBack} 
-          className="flex items-center gap-2 text-[#00D37F] hover:text-[#121B00] mb-6 transition-colors font-medium group"
+          className="flex items-center gap-2 text-[#B0D226] hover:text-[#121B00] mb-6 transition-colors font-medium group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> 
           Back to Search Results
@@ -291,7 +292,7 @@ const ProdDemo = () => {
   
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           {/* Hero Section with Cover */}
-          <div className="h-32 bg-gradient-to-r from-[#00D37F]/20 via-[#dde35f]/30 to-[#F84F94]/20 relative">
+          <div className="h-32 bg-gradient-to-r from-[#B0D226]/20 via-[#dde35f]/30 to-[#F84F94]/20 relative">
             <div className="absolute top-4 right-6 flex items-center gap-2">
               <div className="flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
                 <Eye className="w-4 h-4 text-gray-500" />
@@ -311,7 +312,7 @@ const ProdDemo = () => {
                     className="w-32 h-32 rounded-2xl object-cover border-4 border-white shadow-xl" 
                   />
                   {profile.verified && (
-                    <div className="absolute -top-2 -right-2 bg-[#00D37F] rounded-full p-2 shadow-lg">
+                    <div className="absolute -top-2 -right-2 bg-[#B0D226] rounded-full p-2 shadow-lg">
                       <Shield className="w-4 h-4 text-white" />
                     </div>
                   )}
@@ -404,8 +405,8 @@ const ProdDemo = () => {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {Object.entries(profile.metrics || {}).map(([key, value], index) => (
-                  <div key={index} className="bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-[#00D37F]/30 transition-colors">
-                    <div className="text-2xl font-bold text-[#00D37F] mb-1">{value}</div>
+                  <div key={index} className="bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-[#B0D226]/30 transition-colors">
+                    <div className="text-2xl font-bold text-[#B0D226] mb-1">{value}</div>
                     <div className="text-sm text-gray-600 capitalize">
                       {key.replace(/([A-Z])/g, ' $1').trim()}
                     </div>
@@ -425,7 +426,7 @@ const ProdDemo = () => {
                   {profile.contactInfo?.email && (
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <Mail className="w-5 h-5 text-[#00D37F]" />
+                        <Mail className="w-5 h-5 text-[#B0D226]" />
                         <span className="text-gray-700">{profile.contactInfo.email}</span>
                       </div>
                       <button 
@@ -443,7 +444,7 @@ const ProdDemo = () => {
                   {profile.contactInfo?.phone && (
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <Phone className="w-5 h-5 text-[#00D37F]" />
+                        <Phone className="w-5 h-5 text-[#B0D226]" />
                         <span className="text-gray-700">{profile.contactInfo.phone}</span>
                       </div>
                       <button 
@@ -463,12 +464,12 @@ const ProdDemo = () => {
                   {profile.contactInfo?.website && (
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <Globe className="w-5 h-5 text-[#00D37F]" />
+                        <Globe className="w-5 h-5 text-[#B0D226]" />
                         <a 
                           href={`https://${profile.contactInfo.website}`} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="text-gray-700 hover:text-[#00D37F]"
+                          className="text-gray-700 hover:text-[#B0D226]"
                         >
                           {profile.contactInfo.website}
                         </a>
@@ -480,12 +481,12 @@ const ProdDemo = () => {
                   {profile.contactInfo?.store && (
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <Store className="w-5 h-5 text-[#00D37F]" />
+                        <Store className="w-5 h-5 text-[#B0D226]" />
                         <a 
                           href={profile.contactInfo.store} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="text-gray-700 hover:text-[#00D37F]"
+                          className="text-gray-700 hover:text-[#B0D226]"
                         >
                           Online Store
                         </a>
@@ -498,9 +499,9 @@ const ProdDemo = () => {
             </div>
   
             {/* AI Outreach Suggestions */}
-            <div className="bg-gradient-to-r from-[#00D37F]/5 via-[#dde35f]/10 to-[#F84F94]/5 rounded-2xl p-6 border border-[#00D37F]/20">
+            <div className="bg-gradient-to-r from-[#B0D226]/5 via-[#dde35f]/10 to-[#F84F94]/5 rounded-2xl p-6 border border-[#B0D226]/20">
               <div className="flex items-center gap-2 mb-6">
-                <Zap className="w-6 h-6 text-[#00D37F]" />
+                <Zap className="w-6 h-6 text-[#B0D226]" />
                 <h3 className="text-lg font-bold text-[#121B00]">AI-Powered Outreach Insights</h3>
               </div>
               
@@ -535,7 +536,7 @@ const ProdDemo = () => {
                     <ul className="space-y-2">
                       {outreachSuggestion.tips.map((tip, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-[#00D37F] rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-[#B0D226] rounded-full mt-2 flex-shrink-0"></div>
                           {tip}
                         </li>
                       ))}
@@ -565,27 +566,27 @@ const ProdDemo = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="text-2xl font-bold animate-slide-in-left" style={{color: '#121B00'}}>
-              Prymsearch
+            <div className="animate-slide-in-left">
+              <img src={Logo} className='w-[150px]' />
             </div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-12 animate-fade-in-up">
-              <a href="#features" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
+              <a href="#features" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#B0D226'}}>
                 Features
               </a>
-              <a href="#how-it-works" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
+              <a href="#how-it-works" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#B0D226'}}>
                 How it Works
               </a>
-              <a href="#pricing" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#00D37F'}}>
+              <a href="#pricing" className="text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 hover:scale-105" style={{'--hover-color': '#B0D226'}}>
                 Pricing
               </a>
             </div>
 
             <div className="hidden md:flex items-center space-x-4 animate-slide-in-right">
-              <button className="text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-300 hover:scale-105 ripple" style={{backgroundColor: '#121B00'}}>
-                Join Waitlist
-              </button>
+              <button className="text-lgreen px-8 py-4 rounded-full font-medium text-sm hover:opacity-90 transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105 ripple" style={{backgroundColor: '#161D25'}}>
+                  <span>Join Waitlist</span>
+                </button>
             </div>
 
             {/* Mobile menu button */}
@@ -623,16 +624,31 @@ const ProdDemo = () => {
       <main className="container mx-auto pt-[120px] lg:pt-[150px] px-4 py-6 sm:py-8">
         {searchResults.length === 0 && !isSearching && (
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#121B00] mb-4">Find Anyone, Anywhere</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#121B00] mb-4">Find Anyone, Anywhere</h2>
             <p className="text-lg sm:text-base text-gray-600 mb-8 max-w-3xl mx-auto">Use AI to discover the perfect people, businesses, and creators with just a simple description.</p>
           </div>
         )}
         <div className="max-w-4xl mx-auto mb-8">
-          <div className="relative">
+          {/* <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"><Search className="h-6 w-6 text-gray-400" /></div>
-            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && searchQuery.trim() && handleSearch(searchQuery)} placeholder="Describe who you're looking for..." className="w-full pl-12 pr-28 sm:pr-32 py-3 sm:py-4 text-base sm:text-lg border-2 border-gray-200 rounded-xl focus:border-[#00D37F] focus:outline-none transition-colors" />
-            <button onClick={() => searchQuery.trim() && handleSearch(searchQuery)} disabled={!searchQuery.trim() || isSearching} className="absolute inset-y-0 right-0 m-1.5 px-4 sm:px-6 bg-[#00D37F] text-white rounded-lg hover:bg-[#00B36B] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2">
+            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && searchQuery.trim() && handleSearch(searchQuery)} placeholder="Describe who you're looking for..." className="w-full pl-12 pr-28 sm:pr-32 py-3 sm:py-4 text-base sm:text-lg border-2 border-gray-200 rounded-xl focus:border-[#B0D226] focus:outline-none transition-colors" />
+            <button onClick={() => searchQuery.trim() && handleSearch(searchQuery)} disabled={!searchQuery.trim() || isSearching} className="absolute inset-y-0 right-0 m-1.5 px-4 sm:px-6 bg-[#B0D226] text-white rounded-lg hover:bg-[#00B36B] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2">
               {isSearching ? (<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />) : (<><Search className="w-5 h-5" /><span className="hidden sm:inline">Search</span></>)}
+            </button>
+          </div> */}
+          <div className="relative mr-8">
+            <input
+              type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && searchQuery.trim() && handleSearch(searchQuery)} placeholder="Describe who you're looking for..."
+              className="w-full pl-4 pr-20 py-6 border-1 border-gray-400 rounded-full text-gray-900 placeholder-gray-600 focus:outline-none shadow-sm text-sm lg:text-base"
+            />
+            <button 
+              onClick={() => searchQuery.trim() && handleSearch(searchQuery)} disabled={!searchQuery.trim() || isSearching}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-full text-xs lg:text-sm font-medium flex items-center gap-2 transition-all duration-200"
+              style={{ backgroundColor: '#161D25', color: '#B0D226' }}
+            >
+              {isSearching ? (<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />) : 
+              (<><Search className="w-4 h-4 lg:w-5 lg:h-5" /></>)}
+              Search
             </button>
           </div>
         </div>
@@ -643,13 +659,13 @@ const ProdDemo = () => {
               {Object.entries(demoQueries).map(([category, queries]) => (
                 <div key={category} className="bg-white rounded-xl p-4 sm:p-6 shadow-lg border">
                   <div className="flex items-center gap-2 mb-4">
-                    {category === 'professionals' && <User className="w-5 h-5 text-[#00D37F]" />}
+                    {category === 'professionals' && <User className="w-5 h-5 text-[#B0D226]" />}
                     {category === 'businesses' && <Building className="w-5 h-5 text-[#F84F94]" />}
                     {category === 'influencers' && <Users className="w-5 h-5 text-[#dde35f]" />}
                     {category === 'general' && <Search className="w-5 h-5 text-gray-600" />}
                     <h4 className="font-bold text-[#121B00] capitalize">{category}</h4>
                   </div>
-                  <div className="space-y-2">{queries.map((query, index) => (<button key={index} onClick={() => handleSearch(query)} className="text-left text-sm text-gray-600 hover:text-[#00D37F] transition-colors block w-full p-2 rounded hover:bg-gray-50">"{query}"</button>))}</div>
+                  <div className="space-y-2">{queries.map((query, index) => (<button key={index} onClick={() => handleSearch(query)} className="text-left text-sm text-gray-600 hover:text-[#B0D226] transition-colors block w-full p-2 rounded hover:bg-gray-50">"{query}"</button>))}</div>
                 </div>
               ))}
             </div>
@@ -657,7 +673,7 @@ const ProdDemo = () => {
         )}
         {isSearching && (
           <div className="text-center py-12">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-[#00D37F] border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+            <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-[#B0D226] border-t-transparent rounded-full animate-spin mx-auto mb-4" />
             <h3 className="text-lg sm:text-xl font-semibold text-[#121B00] mb-2">Searching...</h3>
             <p className="text-gray-600">Finding your perfect matches</p>
           </div>
@@ -673,7 +689,7 @@ const ProdDemo = () => {
             {totalPages > 1 && (
               <div className="mt-8 flex justify-center items-center gap-2 flex-wrap">
                 <button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} className="px-4 py-2 rounded-md border bg-white text-[#121B00] border-gray-300 disabled:opacity-50 disabled:cursor-not-allowed">Prev</button>
-                {Array.from({ length: totalPages }, (_, i) => (<button key={i} onClick={() => setCurrentPage(i + 1)} className={`px-4 py-2 rounded-md border text-sm font-medium ${currentPage === i + 1 ? 'bg-[#00D37F] text-white border-[#00D37F]' : 'bg-white text-[#121B00] border-gray-300 hover:bg-gray-50'}`}>{i + 1}</button>))}
+                {Array.from({ length: totalPages }, (_, i) => (<button key={i} onClick={() => setCurrentPage(i + 1)} className={`px-4 py-2 rounded-md border text-sm font-medium ${currentPage === i + 1 ? 'bg-[#B0D226] text-white border-[#B0D226]' : 'bg-white text-[#121B00] border-gray-300 hover:bg-gray-50'}`}>{i + 1}</button>))}
                 <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} className="px-4 py-2 rounded-md border bg-white text-[#121B00] border-gray-300 disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
               </div>
             )}
@@ -690,7 +706,7 @@ const ProdDemo = () => {
       <footer className="bg-[#121B00] text-white py-10 mt-16">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-[#00D37F] to-[#F84F94] rounded-lg flex items-center justify-center"><Search className="w-5 h-5 text-white" /></div>
+            <div className="w-8 h-8 bg-gradient-to-r from-[#B0D226] to-[#F84F94] rounded-lg flex items-center justify-center"><Search className="w-5 h-5 text-white" /></div>
             <h3 className="text-xl font-bold">Prymsearch</h3>
           </div>
           <p className="text-gray-300 mb-4">Powered by AI • Find People, Businesses & Creators</p>

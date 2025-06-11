@@ -154,12 +154,12 @@ const WaitlistModal = ({
               >
                 Join the Waitlist
               </h2>
-              <p className="text-gray-600">
+              <p className="text-sm text-gray-600">
                 Be the first to know when we launch
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 !text-sm">
               <div>
                 <label 
                   htmlFor="name" 
