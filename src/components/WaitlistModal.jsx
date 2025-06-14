@@ -299,7 +299,7 @@ const WaitlistModal = ({
               style={{ borderLeft: `4px solid #B0D226`, borderRight: `4px solid #B0D226` }}
             >
               <p className="text-sm text-gray-600">
-                <span className='font-semibold'>First 100 have access to full pro features for 45 days after launch. Invite others! </span><br /> <br />We'll notify you as soon as we're ready to launch!
+                <span className='font-semibold'>First 100 have access to 100 free search credits after launch. Invite others! </span><br /> <br />We'll notify you as soon as we're ready to launch!
               </p>
             </div>
           </div>
